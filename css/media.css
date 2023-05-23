@@ -1,0 +1,15 @@
+@media(max-width:450px){
+    .menu-fixed{
+        width: 20px;
+        height: 10px;
+    }
+    .menu-fixed ul{
+        position: relative;
+        right: 40px;
+    }
+    p{
+        position: relative;
+        top: 821px;
+    }
+
+}
