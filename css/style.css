@@ -117,12 +117,6 @@ a{  /*tirar linha de baixo do link*/
     transition: all .2s linear;
     text-shadow: 2px 1px 5px #49005c;
 }
-.contato > p{
-    display: block;
-}
-.contato:hover > p{
-    display: inline;
-}
 p{
     position: relative;
     color: azure;
