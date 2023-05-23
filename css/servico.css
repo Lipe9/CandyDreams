@@ -71,7 +71,7 @@ a{  /*tirar linha de baixo do link*/
 }
 #nome{
     position: relative;
-    left: -130px;
+    left: -80px;
     bottom: 18px;
     color: purple;
     font-family:serif;
@@ -100,9 +100,11 @@ a{  /*tirar linha de baixo do link*/
    
 }
 .servico{
+    color: yellow;
     position: relative;
     left: 20px;
-    transition: 1s;
+    border-bottom: 4px solid aliceblue;
+    text-shadow: 2px 1px 5px #49005c;
 }
 .contato:hover{
     color: yellow;
@@ -113,9 +115,20 @@ a{  /*tirar linha de baixo do link*/
 
 .servico:hover{
     color: yellow;
+    text-shadow: 2px 1px 5px #49005c;
+}
+.sobre{
+    position: relative;
+    left: 20px;
+    transition: 1s;
+
+}
+.sobre:hover{
+    color: yellow;
     border-bottom: 4px solid aliceblue;
     transition: all .2s linear;
     text-shadow: 2px 1px 5px #49005c;
+
 }
 p{
     position: relative;

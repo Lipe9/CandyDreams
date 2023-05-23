@@ -71,7 +71,7 @@ a{  /*tirar linha de baixo do link*/
 }
 #nome{
     position: relative;
-    left: -130px;
+    left: -80px;
     bottom: 18px;
     color: purple;
     font-family:serif;
@@ -98,6 +98,13 @@ a{  /*tirar linha de baixo do link*/
     left: 20px;
     transition: 1s;
    
+}
+.sobre{
+    color: yellow;
+    position: relative;
+    left: 20px;
+    border-bottom: 4px solid aliceblue;
+    text-shadow: 2px 1px 5px #49005c;
 }
 .servico{
     position: relative;
