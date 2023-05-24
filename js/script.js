@@ -1,1 +1,1 @@
-alert("Óla, sejam bem-vindos a Candy Dreams")
+
