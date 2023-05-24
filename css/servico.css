@@ -71,7 +71,7 @@ a{  /*tirar linha de baixo do link*/
 }
 #nome{
     position: relative;
-    left: -80px;
+    left: -130px;
     bottom: 18px;
     color: purple;
     font-family:serif;
