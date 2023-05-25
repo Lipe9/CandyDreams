@@ -17,6 +17,7 @@ a{  /*tirar linha de baixo do link*/
     background-color: #F0B7FF;
     width: 4000px;
     height: 100px;
+    z-index: 1;
     
     box-shadow: 0px 0px 17px  purple;
     border-bottom: 20px;
@@ -41,6 +42,7 @@ a{  /*tirar linha de baixo do link*/
     left: 100px;
     bottom: 10px;
     transition: 2s;
+    z-index: 1;
 }
 .dp-menu ul li{
     display: inline-block;
@@ -143,40 +145,67 @@ li{
     list-style: none;
 }
 .equipe{
-    border: solid 3px purple;
+  
     border-radius: 100px;
     position:relative;
     top: 100px;
     left: 100px;
-    justify-content: center;
+    z-index: 1;
 
     width: 1680px;
     height: 100px;
-    box-shadow: 2px 2px 10px rgb(199, 28, 185);
+    transition: 1000ms;
+}
+
+#equipe1{
+    border: solid 3px purple;
+    box-shadow: 2px 2px 5px rgb(199, 28, 185);
+    z-index: 0;
 }
 .p1{
     font-size: 23px;
     position: relative;
-    top: 168px;
+    top: 186px;
     color: black;
 }
 .equipe:hover{
+    border: 3px solid purple;
     box-shadow: 2px 2px 10px rgb(199, 28, 185);
+    color: black;
+    transition: 1000ms;
 }
-#img5{
-    border: solid 3px black;
-    border-radius: 1000px;
-    height: 200px;
-    width: 200px;
-    position: relative;
-    left: 100px;
-    top: 180px;
+
+.mainimg{
+    display: flex;
+    display: inline-block;
 }
-.img1{
-    position: relative;
-    left: 2px;
-    top: 2px;
+.img{
     border-radius: 1000px;
-    width: 190px;
+    width: 194px;
+}
+#img1{
+    border: solid 4px black;
+    position: relative;
+    left: 130px;
+    top: 170px;
+
+}
+#img2{
+    border: solid 4px black;
+    position: relative;
+    left: 480px;
+    top: -27px;
+}
+#img3{
+    border: solid 4px black;
+    position: relative;
+    left: 1000px;
+    bottom: 220px;
+}
+#img4{
+    border: solid 4px black;
+    position: relative;
+    left: 1360px;
+    bottom: 419px;
 }
 
