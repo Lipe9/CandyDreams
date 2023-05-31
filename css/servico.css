@@ -75,15 +75,12 @@ a{  /*tirar linha de baixo do link*/
     bottom: 18px;
     color: purple;
     font-family:serif;
-
 }
 #nome:hover{
     color:darkmagenta;
     transition: all .2s linear;
     cursor:default;
     text-shadow: 2px 1px 5px yellow;
-
-
 }
 .container{
     list-style: none;
@@ -128,7 +125,6 @@ a{  /*tirar linha de baixo do link*/
     border-bottom: 4px solid aliceblue;
     transition: all .2s linear;
     text-shadow: 2px 1px 5px #49005c;
-
 }
 p{
     position: relative;

@@ -151,6 +151,7 @@ li{
     top: 100px;
     left: 100px;
     z-index: 1;
+    
 
     width: 1680px;
     height: 100px;
@@ -161,19 +162,21 @@ li{
     border: solid 3px purple;
     box-shadow: 2px 2px 5px rgb(199, 28, 185);
     z-index: 0;
+    
 }
 .p1{
     font-size: 23px;
     position: relative;
-    top: 186px;
     color: black;
+    top: -1px;
+    top: 186px;
 }
 .equipe:hover{
     border: 3px solid purple;
     box-shadow: 2px 2px 10px rgb(199, 28, 185);
     color: black;
-    transition: 1000ms;
 }
+
 
 .mainimg{
     display: flex;
@@ -188,25 +191,83 @@ li{
     position: relative;
     left: 130px;
     top: 170px;
+    height: 250px;
+    width: 250px;
     border-radius: 1000px;
+    background-image: url(../img/giselly.jpg);
+    background-size: cover;
+    background-position-y: 10px;
+    background-position: 10px;
+    background-position-x: -1px;
 
 }
 #img2{
     border: solid 4px black;
     position: relative;
     left: 480px;
-    top: -27px;
+    top: -70px;
+    height: 250px;
+    width: 250px;
+    border-radius: 1000px;
+    background-image: url(../img/.jpg);
+    background-size: cover;
+    background-position-y: 10px;
+    background-position: 10px;
+    background-position-x: -1px;
 }
 #img3{
     border: solid 4px black;
     position: relative;
     left: 1000px;
-    bottom: 220px;
+    bottom: 320px;
+    height: 250px;
+    width: 250px;
+    border-radius: 1000px;
+    background-image: url(../img/days.jpg);
+    background-size: cover;
+    background-position-y: 10px;
+    background-position: 10px;
+    background-position-x: -1px;
 }
 #img4{
     border: solid 4px black;
     position: relative;
     left: 1360px;
-    bottom: 419px;
+    bottom: 570px;
+    height: 250px;
+    width: 250px;
+    border-radius: 1000px;
+    background-image: url(../img/kaio.jpg);
+    background-size: cover;
+    background-position-y: 10px;
+    background-position: 10px;
+    background-position-x: -1px;
 }
 
+
+.name{
+    position: relative;
+    left: 100px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+#felipe{
+    position: relative;
+    left: 570px;
+    top: 450px;
+}
+#giselly{
+    position: relative;
+    left: 170px;
+    top: 418px;
+}
+#kaio{
+    position: relative;
+    left: 1465px;
+    top: 384px;
+}
+#days{
+    position: relative;
+    left: 1100px;
+    top: 350px;
+}
