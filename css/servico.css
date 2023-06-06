@@ -7,6 +7,7 @@ body{   /*Imagem de fundo*/
     background-image: url(../img/fundo.jpg);
     background-size: cover;
     background-position: center top;
+    font-family: 'Lobster Two';
 }
 a{  /*tirar linha de baixo do link*/
     text-decoration:none;
@@ -67,6 +68,8 @@ a{  /*tirar linha de baixo do link*/
     bottom: 18px;
     font-size: 25px;
     left: 200px;
+   
+
 
 }
 #nome{
@@ -74,7 +77,9 @@ a{  /*tirar linha de baixo do link*/
     left: -130px;
     bottom: 18px;
     color: purple;
-    font-family:serif;
+    font-family: 'Playball', cursiva;
+    font-size: 32px;
+
 }
 #nome:hover{
     color:darkmagenta;

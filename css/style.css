@@ -1,3 +1,4 @@
+
 *{      /* Geral */
     margin: 0%;
     padding: 0%;
@@ -7,6 +8,8 @@ body{   /*Imagem de fundo*/
     background-image: url(../img/fundo.jpg);
     background-size: cover;
     background-position: center top;
+    
+    font-family: 'Lobster Two';
 }
 a{  /*tirar linha de baixo do link*/
     text-decoration:none;
@@ -71,19 +74,20 @@ a{  /*tirar linha de baixo do link*/
 }
 #nome{
     position: relative;
-    left: -130px;
+    left: -135px;
     bottom: 18px;
     color: purple;
-    font-family:serif;
-
+   
+    
+    font-family: 'Playball', cursiva;
+    font-size: 32px;
+   
 }
 #nome:hover{
     color:darkmagenta;
     transition: all .2s linear;
     cursor:default;
     text-shadow: 2px 1px 5px yellow;
-
-
 }
 .container{
     list-style: none;

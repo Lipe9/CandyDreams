@@ -2,11 +2,14 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    
 }
 body{   /*Imagem de fundo*/
     background-image: url(../img/fundo.jpg);
     background-size: cover;
     background-position: center top;
+    font-family: 'Lobster Two';
+    position: fixed;
 }
 a{  /*tirar linha de baixo do link*/
     text-decoration:none;
@@ -76,7 +79,8 @@ a{  /*tirar linha de baixo do link*/
     left: -130px;
     bottom: 18px;
     color: purple;
-    font-family:serif;
+    font-family: 'Playball', cursiva;
+    font-size: 32px;
 
 }
 #nome:hover{
@@ -158,30 +162,20 @@ li{
     transition: 1000ms;
 }
 
-#equipe1{
-    border: solid 3px purple;
-    box-shadow: 2px 2px 5px rgb(199, 28, 185);
-    z-index: 0;
-    
-}
 .p1{
-    font-size: 23px;
+    font-size: 21px;
     position: relative;
-    color: black;
+    color: rgb(255, 255, 255);
     top: -1px;
     top: 186px;
-}
-.equipe:hover{
-    border: 3px solid purple;
-    box-shadow: 2px 2px 10px rgb(199, 28, 185);
-    color: black;
+    height: 94px;
+    border: 3px solid rgb(138, 58, 141);
+    border-radius: 1000px;
+    background-color: #F0B7FF;
+    left: 88px;
+    box-shadow: 0px 0px 10px purple;
 }
 
-
-.mainimg{
-    display: flex;
-    display: inline-block;
-}
 .img{
     border-radius: 1000px;
     width: 194px;
@@ -210,6 +204,7 @@ li{
     width: 250px;
     border-radius: 1000px;
     background-image: url(../img/.jpg);
+    background-color: black;
     background-size: cover;
     background-position-y: 10px;
     background-position: 10px;
@@ -243,12 +238,10 @@ li{
     background-position: 10px;
     background-position-x: -1px;
 }
-
-
 .name{
     position: relative;
     left: 100px;
-    font-family:'Times New Roman', Times, serif;
+    
     font-size: 30px;
 }
 #felipe{
