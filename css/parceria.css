@@ -1,0 +1,9 @@
+#parceria a{
+    color: yellow;
+    text-shadow: 5px 6px 5px purple;
+}
+#servico a{
+    position: relative;
+    right: 80px;
+}
+

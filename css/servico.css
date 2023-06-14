@@ -1,0 +1,18 @@
+#servico a{
+    position: relative;
+    right: 80px;
+    color: yellow;
+    text-shadow: 5px 6px 5px purple;
+}
+#ser1,#ser2,#ser3{
+    transition: 1s;
+    border: 3px solid #F0B7FF;
+    box-shadow: 0px 0px 20px purple;
+    margin: 20px;
+}
+#ser1:hover,#ser2:hover,#ser3:hover{
+    transition: 2000ms;
+    width: 500px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px yellow;
+}
