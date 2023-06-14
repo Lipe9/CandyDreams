@@ -7,7 +7,6 @@
 body{
     background-image: url(../img/fundo\ melhorado.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
 }
 .container{
     width: 80vw;
