@@ -15,8 +15,8 @@ body{
 }
 .header{
     position: fixed;
-    width: 1920px;
-    height: 150px;
+    width: 100%;
+    height: 15%;
     background-color: #F0B7FF;
     display: flex;
     align-items: center;
@@ -37,14 +37,15 @@ body{
     align-items: center;
 }
 .logo{
-    width: 150px;
+    width: 10%;
 }
 h1{
     position: relative;
-    right: 390px;
+    right: 26%;
     font-family: 'Playball', cursiva;
-    font-size: 40px;
+    font-size: 2.5em;
     text-shadow: 4px 4px 5px palevioletred;
+    transition: 600ms;
 }
 h1 a{
     text-decoration: none;
@@ -54,25 +55,21 @@ h1:hover{
     color:darkmagenta;
     transition: all .2s linear;
     cursor:default;
-    font-size: 40px;
     text-shadow: 4px 4px 5px yellow;
+    transition: 600ms;
 }
 .menu ul{
     display: flex;
     gap: 2rem;
     list-style: none;
 }
-#servico a{
-    position: relative;
-    right: 80px;
-}
 .menu a{
     text-decoration: none;
     color: black;
     font-family: 'Lobster Two';
-    font-size: 25px;
+    font-size: 1.6em;
     position: relative;
-    right: 100px;
+    
     cursor: context-menu;
     text-shadow: 4px 4px 5px palevioletred;
     transition: 600ms;
@@ -83,20 +80,19 @@ h1:hover{
     text-shadow: 4px 4px 5px purple;
 }
 #sub-img{
-    width: 110px;
-    height: 40px;
+    width: 6%;
     border-radius: 100px;
     box-shadow: 0px 0px 10px purple;
     background-color: #F0B7FF;
     display: flex;
     justify-content: center;
-    transition: 500ms;
+    transition: 600ms;
 } 
 #sub-img:hover{
     background-color: plum;
     box-shadow: 5px 5px 8px yellow;
     border-radius: 0px 20px 0px 20px;
-    transition: 500ms;
+    transition: 600ms;
 }
 main{
     display: flex;
@@ -108,7 +104,6 @@ main{
     display: flex;
     justify-content:flex-start;
 }
-
 footer {
     display: flex;
     justify-content: center;
@@ -119,14 +114,17 @@ footer {
     cursor: context-menu;
 }
 
-/**/
+/* reposivo */
 @media (max-width: 1440px) {
     .header{
         width: 1440px;
     }
     .candy{
         position: relative;
-        left: 168px; 
+        left: 36%; 
+    }
+    .logo{
+        width: 13%;
     }
     .p9{
         width: 1440px;
@@ -134,9 +132,10 @@ footer {
     .img1,.img2,.img3,.img4{
         margin: 10px;
     }
-  }
-
-
+    #sub-img{
+        width: 8%;
+    }
+  } /* resolucão 1440px*/
 @media (max-width: 1024px) {
     .header{
         width: 1024px;
@@ -145,9 +144,14 @@ footer {
         font-size: 22px;
     }
     .candy{
+        font-size: 0.8em;
+    }
+    .menu{
         position: relative;
-        left: 300px;
-        font-size: 30px;
+        right: 10%;
+    }
+    #sub-img{
+        width: 8%;
     }
     #ser1,#ser2,#ser3{
         width: 240px;
@@ -162,16 +166,21 @@ footer {
         width: 1000px;
         height: 1000px;
     }
-  }
-
+  } 
+  /* resolucão 1024px*/
   @media (max-width: 1159px) {
     .header{
         width: 1159px;
     }
     .candy{
         position: relative;
-        left: 280px; 
-        font-size:8px ;
+        left: 60%; 
+    }
+    #sub-img{
+        width: 8%;
+    }
+    .logo{
+        width: 15%;
     }
     #ser1,#ser2,#ser3{
         width: 240px;
@@ -186,61 +195,11 @@ footer {
         width: 1000px;
         height: 1000px;
     }
-  }
-  @media (max-width: 886px) {  /*note*/
-    .header{
-        width: 886px;
-        height: 868px;
-    }
-    .candy{
-        position: relative;
-        left: 600px;
-        font-size: 24px;
-    }
-    .menu a{
-        font-size: 20px;
-    }
-    #ser1,#ser2,#ser3{
-        width: 240px;
-    }
-    #ser1:hover,#ser2:hover,#ser3:hover{
-        width: 200px;
-    }
-    .p9{
-        width: 886px;
-    }
-    .equipe{
+  } 
+  /* resolucão 1159px*/
 
-        width: 1000px;
-        height: 1000px;
-    }
-  }
-  @media (max-width: 1550px){  /*note*/
-    .header{
-        width: 1550px;
-    }
-    .candy{
-        position: relative;
-        left:156px;
-    }
-    #ser1,#ser2,#ser3{
-        width: 240px;
-    }
-    #ser1:hover,#ser2:hover,#ser3:hover{
-        width: 300x;
-    }
-    .img1,.img2,.img3,.img4{
-        position: relative;
-        top: 100px;
-        margin: 10px;
-    }
-    .p9{
-        width: 1550px;
-    }
-    #par2{
-        position: relative;
-        top: 40px;
-    }}
+
+
 .copy a{
     display: flex;
     justify-content: center;
