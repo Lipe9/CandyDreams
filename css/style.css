@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+#servico a{
+    position: relative;
+    right:  32px;
+}
 body{
     background-image: url(../img/fundo\ melhorado.jpg);
     background-size: cover;
