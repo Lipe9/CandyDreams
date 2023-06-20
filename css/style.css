@@ -44,7 +44,7 @@ h1{
     right: 390px;
     font-family: 'Playball', cursiva;
     font-size: 40px;
-    text-shadow: 2px 1px 5px palevioletred;
+    text-shadow: 4px 4px 5px palevioletred;
 }
 h1 a{
     text-decoration: none;
@@ -55,7 +55,7 @@ h1:hover{
     transition: all .2s linear;
     cursor:default;
     font-size: 40px;
-    text-shadow: 2px 1px 5px yellow;
+    text-shadow: 4px 4px 5px yellow;
 }
 .menu ul{
     display: flex;
@@ -74,12 +74,13 @@ h1:hover{
     position: relative;
     right: 100px;
     cursor: context-menu;
-    text-shadow: 2px 1px 5px palevioletred;
+    text-shadow: 4px 4px 5px palevioletred;
+    transition: 600ms;
 }
 .p1:hover a{
     color: yellow;
     transition: 500ms;
-    text-shadow: 5px 6px 5px purple;
+    text-shadow: 4px 4px 5px purple;
 }
 #sub-img{
     width: 110px;
@@ -160,6 +161,28 @@ footer {
         height: 1000px;
     }
   }
+  @media (max-width: 1159px) {
+    .header{
+        width: 1159px;
+    }
+    .candy{
+        position: relative;
+        left: 280px; 
+    }
+    #ser1,#ser2,#ser3{
+        width: 240px;
+    }
+    #ser1:hover,#ser2:hover,#ser3:hover{
+        width: 200px;
+    }
+    .p9{
+        width: 1024px;
+    }
+    .equipe{
+        width: 1000px;
+        height: 1000px;
+    }
+  }
   @media (max-width: 320px) {
     .header{
         width: 320px;
@@ -176,4 +199,13 @@ footer {
     cursor: context-menu;
     color:black;
     text-decoration: none;
+    font-family: 'Lobster Two';
+    font-size: 15px;
+    transition: 600ms;
+    text-shadow: 0px 2px 10px purple;
+}
+
+.copy a:hover{
+    transition: 600ms;
+    text-shadow: 0px 2px 10px yellow;
 }
