@@ -135,6 +135,8 @@ footer {
         margin: 10px;
     }
   }
+
+
 @media (max-width: 1024px) {
     .header{
         width: 1024px;
@@ -161,6 +163,7 @@ footer {
         height: 1000px;
     }
   }
+
   @media (max-width: 1159px) {
     .header{
         width: 1159px;
@@ -168,6 +171,7 @@ footer {
     .candy{
         position: relative;
         left: 280px; 
+        font-size:8px ;
     }
     #ser1,#ser2,#ser3{
         width: 240px;
@@ -183,13 +187,14 @@ footer {
         height: 1000px;
     }
   }
-  @media (max-width: 886px) {
+  @media (max-width: 886px) {  /*note*/
     .header{
         width: 886px;
+        height: 868px;
     }
     .candy{
         position: relative;
-        left: 320px;
+        left: 600px;
         font-size: 24px;
     }
     .menu a{
@@ -210,9 +215,32 @@ footer {
         height: 1000px;
     }
   }
-
-
-
+  @media (max-width: 1550px){  /*note*/
+    .header{
+        width: 1550px;
+    }
+    .candy{
+        position: relative;
+        left:156px;
+    }
+    #ser1,#ser2,#ser3{
+        width: 240px;
+    }
+    #ser1:hover,#ser2:hover,#ser3:hover{
+        width: 300x;
+    }
+    .img1,.img2,.img3,.img4{
+        position: relative;
+        top: 100px;
+        margin: 10px;
+    }
+    .p9{
+        width: 1550px;
+    }
+    #par2{
+        position: relative;
+        top: 40px;
+    }}
 .copy a{
     display: flex;
     justify-content: center;
