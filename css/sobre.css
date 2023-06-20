@@ -3,10 +3,7 @@
     color: yellow;
     text-shadow: 5px 6px 5px purple;
 }
-#servico a{
-    position: relative;
-    left:  32px;
-}
+
 
 #equipe{
     display: flex;
