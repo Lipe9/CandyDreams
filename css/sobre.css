@@ -44,12 +44,12 @@ section {
     text-align: center;
     box-shadow: 0px 2px 10px purple;
     background-color: #F0B7FF;
-    transition: 600ms;
+    transition: 1000ms;
 }
 .frase:hover{
     background-color: plum;
     box-shadow: 0px 2px 10px yellow;
-    transition: 600ms;
+    transition: 1000ms;
     color: black;
     text-shadow: 0px 1px 0px purple;
 }
@@ -99,7 +99,7 @@ section {
     width: 250px;
     border-radius: 1000px;
     background-color: black;
-    background-image: url(../img/IMG-20230524-WA0029.jpg);
+    background-image: url(../img/Kaio\ perfil.png);
     background-size: cover;
     background-position-y: 10px;
     background-position: 10px;

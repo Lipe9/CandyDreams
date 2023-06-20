@@ -44,6 +44,7 @@ h1{
     right: 390px;
     font-family: 'Playball', cursiva;
     font-size: 40px;
+    text-shadow: 2px 1px 5px palevioletred;
 }
 h1 a{
     text-decoration: none;
@@ -73,6 +74,7 @@ h1:hover{
     position: relative;
     right: 100px;
     cursor: context-menu;
+    text-shadow: 2px 1px 5px palevioletred;
 }
 .p1:hover a{
     color: yellow;
@@ -101,10 +103,19 @@ main{
     align-items: center;
     height: calc(100vh - 100px);
 }
+.main1{
+    display: flex;
+    justify-content:flex-start;
+}
 
 footer {
     display: flex;
     justify-content: center;
+}
+.text-in{
+    border: solid 2px purple;
+    box-shadow: 0px 0px 10px purple;
+    cursor: context-menu;
 }
 
 /**/
@@ -155,3 +166,14 @@ footer {
     }
   }
 
+
+
+.copy a{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 37px;
+    cursor: context-menu;
+    color:black;
+    text-decoration: none;
+}
