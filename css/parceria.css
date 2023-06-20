@@ -6,4 +6,7 @@
     position: relative;
     right: 80px;
 }
-
+.par{
+    border-radius: 1000px;
+    box-shadow: 0px 0px 10px purple;
+}
