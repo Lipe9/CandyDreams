@@ -183,9 +183,31 @@ footer {
         height: 1000px;
     }
   }
-  @media (max-width: 320px) {
+  @media (max-width: 886px) {
     .header{
-        width: 320px;
+        width: 886px;
+    }
+    .candy{
+        position: relative;
+        left: 320px;
+        font-size: 24px;
+    }
+    .menu a{
+        font-size: 20px;
+    }
+    #ser1,#ser2,#ser3{
+        width: 240px;
+    }
+    #ser1:hover,#ser2:hover,#ser3:hover{
+        width: 200px;
+    }
+    .p9{
+        width: 886px;
+    }
+    .equipe{
+
+        width: 1000px;
+        height: 1000px;
     }
   }
 
