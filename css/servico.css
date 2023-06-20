@@ -1,8 +1,6 @@
 #servico a{
     color: yellow;
     text-shadow: 5px 6px 5px purple;
-    position: relative;
-    left:  32px;
 }
 #ser1,#ser2,#ser3{
     transition: 800ms;
