@@ -47,7 +47,7 @@ html,body{
 }
 h1{
     position: relative;
-    right: 20%;
+    right: 21%;
     font-family: 'Playball', cursiva;
     font-size: 2.3em;
     text-shadow: 4px 4px 5px palevioletred;
@@ -109,7 +109,7 @@ h1:hover{
     bottom: 110px;
     transition: 600ms;
 }
-#sub-img:hover{
+#sub-img:hover,#sub-img1:hover{
     background-color: plum;
     box-shadow: 5px 5px 8px yellow;
     border-radius: 0px 20px 0px 20px;
@@ -128,7 +128,12 @@ main{
     margin-top: 70px;
     margin-left: 140px;
     font-size: 25px;
-    text-shadow: 10px 2px 20px #d65ed6;
+    text-shadow: 2px 1px 5px purple;
+    cursor: context-menu;
+}
+
+.bx1{
+    color:rgb(188, 7, 188);
 }
 footer {
     display: flex;
@@ -139,43 +144,35 @@ footer {
     box-shadow: 0px 0px 10px purple;
     cursor: context-menu;
 }
-
-/* reposivo */
-@media (max-width: 1440px) {
-    .header{
-        width: 1440px;
-        height: 100px;
-        
-        
-    }
-    .candy {
+/*Edição da Home Page*/
+section.introdução{
+    height: calc(100%-200px);
+    position: relative;
+}
+.edition{
+    position: absolute;
+    bottom: -380px;
+    right: -300px;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    background-color: #F0B7FF;
+    box-shadow: 0px 0px 20px purple;
+    transition: 600ms;
+}
+.edition:hover{
+    background-color: plum;
+    box-shadow: 0px 0px 20px yellow;
+    transition: 600ms;
+    
+}
+@media screen { max-width: 100%;
+    .candy{
         position: relative;
-        left: 36%; 
+        right: 42%;
+        font-size: 2.4rem;
     }
-    .logo{
-        width: 10%;
-    }
-
-    .p9.frase{
-        width: 1440px;
-        position: relative;
-        
-
-    }
-    .img1,.img2,.img3,.img4{
-        position: relative;
-        top: 80px;
-        margin: 10px;
-    }
-    #sub-img{
-        width: 8%;
-    }
-    #ser1,#ser2,#ser3{
-        width: 240px;
-    }
-    #ser1:hover,#ser2:hover,#ser3:hover{
-        width: 100px;
-} 
+    
 }
 /* resolucão 1440px*/
 @media (max-width: 1024px) {
@@ -270,22 +267,12 @@ footer {
     transition: 600ms;
     text-shadow: 0px 2px 10px purple;
 }
-
 .copy a:hover{
     transition: 600ms;
     text-shadow: 0px 2px 10px yellow;
 }
-/*Edição da Home Page*/
-section.introdução{
-    height: calc(100%-200px);
-    position: relative;
+.copy1 a:hover{
+    transition: 600ms;
+    text-shadow: 0px 2px 10px yellow;
 }
-.edition{
-    position: absolute;
-    bottom: -380px;
-    right: -300px;
-    width: 900px;
-    height: 900px;
-    border-radius: 50%;
-    background-color: #F0B7FF;
-}
+

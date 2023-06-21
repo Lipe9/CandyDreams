@@ -7,6 +7,7 @@
     box-shadow: 0px 0px 20px purple;
     margin: 20px;
 }
+/* HOVER PARA AUMENTAR O TAMANHO */
 #ser1:hover,#ser2:hover,#ser3:hover{
     transition: 1000ms;
     width: 330px;

@@ -11,7 +11,7 @@
 body{
     height: 100vh;
 }
-section {
+section{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -21,19 +21,18 @@ section {
     border: 2px solid purple;
     margin: 15px;
 }
-
 .giselly:hover,.felipe:hover,.days:hover,:hover.kaio:hover{
     box-shadow: 0px 2px 10px yellow;
     transition: 600ms;
 }
-.frase{
+.p9{
     cursor: context-menu;
     font-family: 'Lobster Two', cursiva;
     font-size: 20px;
     color: white;
     text-shadow: 10px 2px 20px purple;
     position: fixed;
-    top: 130px;
+    top: 152px;
     width: 100%;
     height: 80px;
     border-radius: 20px 20px 20px 20px;
@@ -42,69 +41,40 @@ section {
     background-color: #F0B7FF;
     transition: 1000ms;
 }
-.frase:hover{
+.p9:hover{
     background-color: plum;
     box-shadow: 0px 2px 10px yellow;
     transition: 1000ms;
     color: black;
     text-shadow: 0px 1px 0px purple;
 }
-
 .img1,.img2,.img3,.img4{
     position: relative;
-    top: 30px;
+    top: 40px;
     margin: 15px;
     box-shadow: 0px 2px 10px purple;
+    border: solid 4px black;
+    background-position-y: 10px;
+    background-position: 10px;
+    background-position-x: -1px;
+    background-size: cover;
+    height: 230px;
+    width: 230px;
+    border-radius: 1000px;
 }
-
 .img1{
-    border: solid 4px black;
-    height: 250px;
-    width: 250px;
-    border-radius: 1000px;
     background-image: url(../img/giselly.jpg);
-    background-size: cover;
-    background-position-y: 10px;
-    background-position: 10px;
-    background-position-x: -1px;
- }
- .img2{
-    border: solid 4px black;
-    height: 250px;
-    width: 250px;
-    border-radius: 1000px;
+}
+.img2{
     background-image: url(../img/IMG-20230601-WA0023.jpg);
-    background-color: black;
-    background-size: cover;
-    background-position-y: 10px;
-    background-position: 10px;
-    background-position-x: -1px;
- }
- .img3{
-    border: solid 4px black;
-    height: 250px;
-    width: 250px;
-    border-radius: 1000px;
+}
+.img3{
     background-image: url(../img/days.jpg);
-    background-size: cover;
-    background-position-y: 10px;
-    background-position: 10px;
-    background-position-x: -1px;
- }
- .img4{
-    border: solid 4px black;
-    height: 250px;
-    width: 250px;
-    border-radius: 1000px;
-    background-color: black;
+}
+.img4{
     background-image: url(../img/Kaio\ perfil.png);
-    background-size: cover;
-    background-position-y: 10px;
-    background-position: 10px;
-    background-position-x: -1px;
- }
-
- #nomes{
+}
+#nomes{
     position: relative;
     top: 265px;
     left: 70px;
