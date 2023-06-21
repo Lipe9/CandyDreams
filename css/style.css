@@ -9,6 +9,12 @@ body{
     background-size: cover;
     height: 100vh;
 }
+/*Parte adicional para a Edição da Home Page*/
+html,body{
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
 .container{
     width: 80vw;
     margin: 0 auto;
@@ -41,9 +47,9 @@ body{
 }
 h1{
     position: relative;
-    right: 27%;
+    right: 20%;
     font-family: 'Playball', cursiva;
-    font-size: 2.5em;
+    font-size: 2.3em;
     text-shadow: 4px 4px 5px palevioletred;
     transition: 600ms;
 }
@@ -60,7 +66,7 @@ h1:hover{
 }
 .menu ul{
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     list-style: none;
 }
 .menu a{
@@ -85,9 +91,24 @@ h1:hover{
     box-shadow: 0px 0px 10px purple;
     background-color: #F0B7FF;
     display: flex;
-    justify-content: center;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    bottom: 40px;
     transition: 600ms;
 } 
+#sub-img1{
+    width: 6%;
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px purple;
+    background-color: #F0B7FF;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    bottom: 110px;
+    transition: 600ms;
+}
 #sub-img:hover{
     background-color: plum;
     box-shadow: 5px 5px 8px yellow;
@@ -100,9 +121,14 @@ main{
     align-items: center;
     height: calc(100vh - 100px);
 }
+/*Segundo Adicional para a Home Page*/
 .main1{
     display: flex;
     justify-content:flex-start;
+    margin-top: 70px;
+    margin-left: 140px;
+    font-size: 25px;
+    text-shadow: 10px 2px 20px #d65ed6;
 }
 footer {
     display: flex;
@@ -118,27 +144,44 @@ footer {
 @media (max-width: 1440px) {
     .header{
         width: 1440px;
+        height: 100px;
+        
+        
     }
-    .candy{
+    .candy {
         position: relative;
         left: 36%; 
     }
     .logo{
-        width: 13%;
+        width: 10%;
     }
-    .p9{
+
+    .p9.frase{
         width: 1440px;
+        position: relative;
+        
+
     }
     .img1,.img2,.img3,.img4{
+        position: relative;
+        top: 80px;
         margin: 10px;
     }
     #sub-img{
         width: 8%;
     }
-  } /* resolucão 1440px*/
+    #ser1,#ser2,#ser3{
+        width: 240px;
+    }
+    #ser1:hover,#ser2:hover,#ser3:hover{
+        width: 100px;
+} 
+}
+/* resolucão 1440px*/
 @media (max-width: 1024px) {
     .header{
         width: 1024px;
+        
     }
     .menu a{
         font-size: 22px;
@@ -168,13 +211,14 @@ footer {
     }
   } 
   /* resolucão 1024px*/
-  @media (max-width: 1159px) {
+  @media (max-width: 30%) {
     .header{
         width: 1159px;
+        
     }
     .candy{
         position: relative;
-        left: 60%; 
+        left: 20%;
     }
     #sub-img{
         width: 8%;
@@ -204,7 +248,20 @@ footer {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 37px;
+    top: 28px;
+    cursor: context-menu;
+    color:black;
+    text-decoration: none;
+    font-family: 'Lobster Two';
+    font-size: 15px;
+    transition: 600ms;
+    text-shadow: 0px 2px 10px purple;
+}
+.copy1 a{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -35px;
     cursor: context-menu;
     color:black;
     text-decoration: none;
@@ -217,4 +274,18 @@ footer {
 .copy a:hover{
     transition: 600ms;
     text-shadow: 0px 2px 10px yellow;
+}
+/*Edição da Home Page*/
+section.introdução{
+    height: calc(100%-200px);
+    position: relative;
+}
+.edition{
+    position: absolute;
+    bottom: -380px;
+    right: -300px;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    background-color: #F0B7FF;
 }
