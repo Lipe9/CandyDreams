@@ -21,6 +21,9 @@ section {
     top: 180px;
   }
   @media screen and (max-width: 763px){
+    body{
+        overflow: hidden;
+    }
     #section2{
         position: relative;
         top: 280px;

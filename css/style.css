@@ -13,6 +13,8 @@ a,li{
 }
 body{
     background: var(--fundo) url(../img/fundo\ melhorado.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
 }
@@ -109,7 +111,8 @@ footer{
     border-left: 3px solid purple;
     border-radius: 15px;
     text-align: center;
-    width: 60%;
+    width: 100%;
+    font-size: 3lvh;
 }
 .icon2{
     width: 5%;
@@ -141,8 +144,8 @@ footer{
     body{
         overflow: hidden;
     }
-    .conteudo .p3{
-        font-size: 1lvh;
+    main .p3{
+       width: 300px;
     }
     .logo img {
         width: 30%;
@@ -157,7 +160,7 @@ footer{
     }
     .conteudo{
         position: absolute;
-        top: 300px;
+        top: 430px;
         margin: 10px;
         font-size: 2lvh;
     }
