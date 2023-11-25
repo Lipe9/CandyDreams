@@ -81,7 +81,6 @@ main h2{
 
 .mobile-icon{
     display: none;
-    z-index: 2;
 }
 .mobile-menu{
     display: none;
@@ -138,17 +137,23 @@ footer{
 }
 
 
-
 @media screen and (max-width: 763px){
-    footer{
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-        padding: 2em;
-        color: var(--branco);
-        position: relative;
-        top: 510px;
+    body{
         overflow: hidden;
+    }
+    .container{
+        width: 100%;
+        height: 14vh;
+    }
+    .conteudo .p3{
+        font-size: 1lvh;
+    }
+    .logo img {
+        width: 25%;
+        display: flex;
+    }
+    footer{
+        top: 90%;
       }
       
     .edition img{
@@ -171,7 +176,7 @@ footer{
         text-align: right;
         margin-top: -20px;
         position: relative;
-        bottom: 20px;
+        bottom: 50px;
         right: 10px;
     }
     .mobile-menu ul{
