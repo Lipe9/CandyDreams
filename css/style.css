@@ -152,18 +152,19 @@ footer{
         display: flex;
     }
     footer{
-        top: 85%;
+        top: 25%;
       }
       
     .edition img{
         display: none;
     }
-    .conteudo{
-        position: absolute;
-        top: 430px;
-        margin: 10px;
-        font-size: 2lvh;
-    }
+    #section1{
+        text-align: center;
+        width: 100%;
+        margin-top: 300px;
+        padding: 20px;
+        cursor: pointer;
+        }
     .nav-bar{
         padding: 1.5rem 4rem;
     }
@@ -187,6 +188,8 @@ footer{
     .mobile-menu .menu-item{
         display: block;
         padding-top: 1.2rem ;
+        font-size: 3.5lvh;
+        margin: 30px;
     }
     .open{
         display: block;
