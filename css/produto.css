@@ -3,12 +3,11 @@ section {
     border-radius: 15px;
     cursor: pointer;
     font-weight: bold;
-    margin: 10px;
     width: 100%;
+    padding: 30px 30px;
   }
   #section2{
-    position: relative;
-    top: 140px;
+    margin-top: 200px;
   }
   .equipe img{
     margin: 5px;
@@ -22,11 +21,10 @@ section {
   }
   @media screen and (max-width: 763px){
     #section2{
-        position: relative;
-        top: 410px;
+        top: 330px;
       }
       .equipe img{
-        width: 45%;
+        width: 50%;
         flex-direction: column;
       }
   }
