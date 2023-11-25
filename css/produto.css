@@ -21,17 +21,12 @@ section {
     top: 180px;
   }
   @media screen and (max-width: 763px){
-    body{
-        overflow: hidden;
-    }
     #section2{
         position: relative;
-        top: 280px;
+        top: 390px;
       }
       .equipe img{
-        width: 30%;
-      }
-      footer{
-        top: 320px;
+        width: 55%;
+        flex-direction: column;
       }
   }
