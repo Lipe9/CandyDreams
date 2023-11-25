@@ -23,10 +23,10 @@ section {
   @media screen and (max-width: 763px){
     #section2{
         position: relative;
-        top: 250px;
+        top: 390px;
       }
       .equipe img{
-        width: 55%;
+        width: 31%;
         flex-direction: column;
       }
   }
