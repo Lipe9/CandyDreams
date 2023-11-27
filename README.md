@@ -1,11 +1,11 @@
-# CandyDreams
+<i><b><h1> CandyDreams </h1>
 Um trabalho escolar na disciplina se Gestão de Startup I.
 
 Membros:<br>
 Felipe Silva <br>
 Kaio Alves <br>
 Ana Giselly <br>
-Days Morais <br>
+Days Morais <br> </i></b>
 
 <div class="p2">
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
