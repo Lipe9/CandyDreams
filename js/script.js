@@ -111,7 +111,7 @@ function renderizarMiniCarrinho() {
 }
 
 function irParaCompra() {
-  window.location.href = 'compra.html';
+  window.location.href = 'comprar.html';
 }
 const iconeCarrinho = document.getElementById("iconeCarrinho");
 const miniCarrinho = document.getElementById("miniCarrinho");
