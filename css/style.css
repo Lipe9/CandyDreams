@@ -16,6 +16,10 @@ body {
   font-weight: 400;
   -webkit-tap-highlight-color: transparent;
 }
+section {
+  scroll-margin-top: 80px; /* ajuste conforme o tamanho do header fixo */
+}
+
 
 nav a {
   font-weight: 600;
