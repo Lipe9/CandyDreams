@@ -213,6 +213,58 @@ footer {
   background: #eee;
   font-size: 0.9rem;
 }
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  max-height: 400px;
+}
+
+.slider {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0%, 25%   { transform: translateX(0); }
+  33%, 58%  { transform: translateX(-100%); }
+  66%, 91%  { transform: translateX(-200%); }
+  100%      { transform: translateX(0); }
+}
+
+.inicio-info {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.botao-destaque {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #ff3e7f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.botao-destaque:hover {
+  background-color: #c71585;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
