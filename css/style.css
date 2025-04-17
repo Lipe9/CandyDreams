@@ -157,10 +157,6 @@ main {
   justify-content: center;
   text-align: center;
 }
-.pagina1{
-  min-height: 150vh;
-}
-
 /* Produtos */
 .produto-card {
   background: #fff0f5;
