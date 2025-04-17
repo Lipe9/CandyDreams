@@ -113,3 +113,14 @@ function renderizarMiniCarrinho() {
 function irParaCompra() {
   window.location.href = 'compra.html';
 }
+const iconeCarrinho = document.getElementById("iconeCarrinho");
+const miniCarrinho = document.getElementById("miniCarrinho");
+const fecharCarrinho = document.getElementById("fecharCarrinho");
+
+iconeCarrinho.addEventListener("click", () => {
+  miniCarrinho.style.display = "block";
+});
+
+fecharCarrinho.addEventListener("click", () => {
+  miniCarrinho.style.display = "none";
+});
