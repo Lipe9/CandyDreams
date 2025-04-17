@@ -83,7 +83,7 @@ nav a:hover {
   cursor: pointer;
   transition: transform 0.3s ease;
   width: 30px;
-  height: 25px;
+  height: 35px;
   justify-content: center;
   position: relative;
 z-index: 1000;
