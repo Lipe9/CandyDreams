@@ -484,3 +484,48 @@ footer {
   color: #ff3e7f;
   cursor: pointer;
 }
+/* Estilo para o contêiner de notificações */
+#notificacao-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Estilo para cada notificação */
+.notificacao {
+  background-color: #ff3e7f;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease, fadeOut 0.3s ease 4s;
+}
+
+/* Animações para as notificações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
