@@ -12,6 +12,7 @@ body {
   line-height: 1.6;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -45,18 +46,52 @@ nav a:hover {
   color: #ffe6f0;
 }
 
+/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 30px;
+  height: 25px;
+  justify-content: center;
+  position: relative;
 }
 
 .hamburger span {
   height: 3px;
-  width: 25px;
+  width: 100%;
   background: white;
-  margin-bottom: 4px;
   border-radius: 5px;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 10px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 20px;
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
 }
 
 .mobile-menu {
@@ -75,14 +110,26 @@ nav a:hover {
   padding: 0.5rem 0;
 }
 
+/* Conteúdo principal */
 main {
+  scroll-behavior: smooth;
+}
+
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2rem;
+  text-align: center;
 }
 
-section {
-  margin-bottom: 3rem;
+.pagina-conteudo {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+/* Produtos */
 .produto-card {
   background: #fff0f5;
   border-radius: 12px;
@@ -93,15 +140,17 @@ section {
 
 .produto-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
+  margin-top: 2rem;
 }
 
+/* Rodapé */
 footer {
   text-align: center;
   padding: 1rem;
@@ -109,14 +158,21 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   nav {
     display: none;
   }
+
   .hamburger {
     display: flex;
   }
+
   .mobile-menu.active {
     display: flex;
+  }
+
+  .pagina {
+    padding: 4rem 1rem;
   }
 }
