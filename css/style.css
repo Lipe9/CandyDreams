@@ -426,15 +426,6 @@ footer {
   background-color: #c71585;
 }
 
-/* Ajuste para o contador no menu hambúrguer */
-.mobile-menu .carrinho-link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
 .mobile-menu .cart-icon {
   width: 30px; /* Tamanho do ícone no menu mobile */
   height: 30px;
