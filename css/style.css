@@ -22,6 +22,18 @@ nav a {
   letter-spacing: 0.5px;
 }
 
+.carousel-container {
+  margin-top: 0; /* Reduz o espaço entre o cabeçalho e o banner */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.home-banner {
+  padding-top: 0; /* Reduz o espaço entre o banner e a mensagem de boas-vindas */
+  margin-top: 0;
+}
 
 nav a,
 .mobile-menu a {
