@@ -433,17 +433,5 @@ footer {
 
 .mobile-menu .cart-count {
   position: absolute;
-  top: -5px; /* Ajuste para alinhar acima do ícone */
-  right: -5px; /* Ajuste para alinhar à direita do ícone */
-  background: #ff3e7f;
-  color: white;
-  font-weight: bold;
-  font-size: 12px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10; /* Garante que fique acima do ícone */
+  right: 200px
 }
