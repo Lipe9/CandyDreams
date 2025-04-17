@@ -10,6 +10,13 @@ body {
   background: #fff;
   color: #333;
   line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+nav a {
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 header {
