@@ -5,98 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Candy Dreams</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-  <div class="logo-container">
-    <img src="img/logo.png" alt="Candy Dreams Logo" class="logo-img">
-    <div class="logo-text">Candy Dreams</div>
-  </div>
-  <nav>
-    <a href="#home">Início</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#produtos">Produtos</a>
-  </nav>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</header>
-
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Candy Dreams Logo" class="logo-img">
+      <div class="logo-text">Candy Dreams</div>
+    </div>
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#carrinho" class="carrinho-link">
+        <img src="img/cart-icon.png" alt="Carrinho" class="cart-icon" />
+        <span id="cart-count" class="cart-count">0</span>
+      </a>
+    </nav>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
   <div class="mobile-menu" id="mobileMenu">
     <a href="#home">Início</a>
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
     <a href="#produtos">Produtos</a>
+    <a href="#carrinho">Carrinho</a>
   </div>
-
   <main>
-  <div class="carousel-container">
-    <div class="carousel" id="carousel">
-      <img src="img/IMG-20250417-WA0005.jpg" alt="Banner 1">
-      <img src="img/IMG-20250417-WA0006.jpg" alt="Banner 2">
-      <img src="img/IMG-20250417-WA0007.jpg" alt="Banner 3">
-    </div>
-    <div class="carousel-controls">
-      <button onclick="moveSlide(-1)">&#10094;</button>
-      <button onclick="moveSlide(1)">&#10095;</button>
-    </div>
-  </div>
-<!-- Seção de boas-vindas abaixo do banner -->
-<section id="home" class="pagina home-banner">
-  <div class="pagina-conteudo1 inicio-info">
-    <h1>Bem-vindo à Candy Dreams</h1>
-    <p>Doces que encantam, sabores que marcam!</p>
-    <p>Oferecemos produtos artesanais, feitos com amor, perfeitos para presentear ou adoçar o seu dia.</p>
-    <a href="#produtos" class="botao-destaque">Conheça nossos produtos</a>
-  </div>
-</section>
-    <section id="sobre" class="pagina">
-      <div class="pagina-conteudo">
-        <h2>Sobre Nós</h2>
-        <p>Somos apaixonados por doces e buscamos sempre levar qualidade e carinho em cada produto.</p>
+    <!-- Seção Home -->
+    <section id="home" class="pagina home-banner">
+      <div class="pagina-conteudo1 inicio-info">
+        <h1>Bem-vindo à Candy Dreams</h1>
+        <p>Doces que encantam, sabores que marcam!</p>
+        <p>Oferecemos produtos artesanais, feitos com amor, perfeitos para presentear ou adoçar o seu dia.</p>
+        <a href="#produtos" class="botao-destaque">Conheça nossos produtos</a>
       </div>
     </section>
-
-    <section id="servicos" class="pagina">
+    <!-- Seção Produtos -->
+    <section id="produtos" class="pagina">
       <div class="pagina-conteudo">
-        <h2>Serviços</h2>
-        <ul>
-          <li>Encomendas para festas</li>
-          <li>Doces personalizados</li>
-          <li>Kits presenteáveis</li>
-        </ul>
+        <h2>Nossos Produtos</h2>
+        <div class="grid">
+          <div class="produto-card">
+            <img src="img/Brigadeiro (1).png" alt="Brigadeiro" width="100" />
+            <h3>Brigadeiro</h3>
+            <p class="preco">R$ 2,50</p>
+            <button class="botao-comprar" onclick="adicionarAoCarrinho('Brigadeiro', 2.50)">Comprar</button>
+          </div>
+          <div class="produto-card">
+            <img src="img/Brownie.png" alt="Brownie" width="100" />
+            <h3>Brownie</h3>
+            <p class="preco">R$ 4,00</p>
+            <button class="botao-comprar" onclick="adicionarAoCarrinho('Brownie', 4.00)">Comprar</button>
+          </div>
+          <div class="produto-card">
+            <img src="img/Mousse.png" alt="Mousse" width="100" />
+            <h3>Mousse</h3>
+            <p class="preco">R$ 5,00</p>
+            <button class="botao-comprar" onclick="adicionarAoCarrinho('Mousse', 5.00)">Comprar</button>
+          </div>
+        </div>
       </div>
     </section>
-
-   <section id="produtos" class="pagina">
-  <div class="pagina-conteudo">
-    <h2>Nossos Produtos</h2>
-    <div class="grid">
-      <div class="produto-card">
-        <img src="img/Brigadeiro (1).png" alt="Brigadeiro" width="100" />
-        <h3>Brigadeiro</h3>
-        <p class="preco">R$ 2,50</p>
-      </div>
-      <div class="produto-card">
-        <img src="img/Brownie.png" alt="Brownie" width="100" />
-        <h3>Brownie</h3>
-        <p class="preco">R$ 4,00</p>
-      </div>
-      <div class="produto-card">
-        <img src="img/Mousse.png" alt="Mousse" width="100" />
-        <h3>Mousse</h3>
-        <p class="preco">R$ 5,00</p>
-      </div>
-    </div>
-  </div>
-</section>
   </main>
-
   <footer>
     <p>&copy; 2023 Candy Dreams. By Lipe dev.</p>
   </footer>
