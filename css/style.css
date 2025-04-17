@@ -21,6 +21,13 @@ nav a {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+.carousel-container {
+  margin-top: 80px; /* Reduza este valor para diminuir o espaço */
+}
+
+.home-banner {
+  padding-top: 20px; /* Reduza este valor para ajustar o espaçamento */
+}
 
 nav a,
 .mobile-menu a {
