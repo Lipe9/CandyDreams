@@ -1,197 +1,39 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-:root{
-    --fundo: #F0B7FF;
-    --font: #000000;
-}
-a,li{
-    list-style: none;
-    text-decoration: none;
-}
-body{
-    background: var(--fundo) url(../img/fundo\ melhorado.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-}
-#home{
-    color: yellow;
-    transition: all 0.3s ease-in-out;
-    text-shadow: 4px 4px 5px purple;
-    letter-spacing: 1px;
-}
-.logo{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo img {
-    width: 10%;
-    display: flex;
-}
-.container{
-    position: fixed;
-    background: var(--fundo);
-    width: 100%;
-    border-radius: 0px  0px 20px 20px;
-    box-shadow: 0 0 20px purple;
-    padding: 0 20px;
-    transition: all 0.3s ease-in-out;
-}
-.container:hover{
-    box-shadow: 0px 2px 10px yellow;
-    transition: all 0.3s ease-in-out;
-}
-.list-menu ul{
-    display: flex;
-    gap: 3em;
-    padding: 0px 60px;
-}
-ul li{
-    color: var(--font);
-    font-weight: 700;
-    font-family: 'Lobster Two';
-    transition: all 0.3s ease-in-out;
-    letter-spacing: 1px;
-}
-li:hover{
-    color: yellow;
-    transition: all 0.3s ease-in-out;
-    text-shadow: 4px 4px 5px purple;
-    letter-spacing: 1px;
-}
-main{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-main h2{
-    text-shadow: 2px 1px 5px purple;
-    cursor: context-menu;
-}
-.bx1{
-    color:rgb(188, 7, 188);
-}
-.edition img{
-    width: 70%;
-    margin-top: 250px;
-}
+/* Reset e base */
 
-.mobile-icon{
-    display: none;
-}
-.mobile-menu{
-    display: none;
-}
-footer{
-    display: block;
-    margin: 0px 0px;
-    text-align: center;
-    padding: 1em 4em;
-    background-color: rgba(128, 0, 128, 0.7) ;
-    color: var(--branco);
-    position: relative;
-    bottom: 40px;
-    overflow: hidden;
-  }
-  footer a{
-    color: #000000;
-    font-size: 2lvh;
-    text-shadow: 0 0 10px purple;
-    letter-spacing: 1px;
-    position: relative;
-    bottom: 10px;
-  }
-  .conteudo h2{
-    box-shadow: 0 0 20px purple;
-    border-left: 3px solid purple;
-    border-radius: 15px;
-    text-align: center;
-    width: 100%;
-    font-size: 3lvh;
-}
-.icon2{
-    width: 5%;
-    border-radius: 15px;
-    transition: all 0.4s ease-in-out;
-}
-.icon2:nth-last-child(1):hover{
-    background-color: #000000;
-    color: white;
-    transition: 0.4s ease-in;
-}
-.icon2:nth-last-child(2):hover{
-    color: white;
-    background-color: green;
-    transition: 0.4s ease-in;
-}
-.icon2:nth-last-child(3):hover{
-    background-image: url(../img/insta.jpg);
-    background-size: cover;
-    color: white;
-    transition: all 0.4s ease-in;
-}
-.iicon{
-    margin: 4px;
-}
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
 
-@media screen and (max-width: 763px){
-    body{
-        overflow: hidden;
-    }
-    main .p3{
-       width: 300px;
-    }
-    .logo img {
-        width: 30%;
-        display: flex;
-    }
-    footer{
-        top: 25%;
-      }
-      
-    .edition img{
-        display: none;
-    }
-    #section1{
-        text-align: center;
-        width: 100%;
-        margin-top: 300px;
-        padding: 20px;
-        cursor: pointer;
-        }
-    .nav-bar{
-        padding: 1.5rem 4rem;
-    }
-    .list-menu{
-        display: none;
-    }
-    .mobile-icon{
-        display: block;
-        text-align: right;
-        margin-top: -20px;
-        position: relative;
-        bottom: 50px;
-        right: 10px;
-    }
-    .mobile-menu ul{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-    .mobile-menu .menu-item{
-        display: block;
-        padding-top: 1.2rem ;
-        font-size: 2lvh;
-        margin: 30px;
-    }
-    .open{
-        display: block;
-    }
-}
+body { background: #fff; color: #333; line-height: 1.6; }
+
+header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #ff69b4; color: white; position: sticky; top: 0; z-index: 1000; }
+
+.logo { font-weight: bold; font-size: 1.5rem; }
+
+nav { display: flex; gap: 1rem; }
+
+nav a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+
+nav a:hover { color: #ffe6f0; }
+
+.hamburger { display: none; flex-direction: column; cursor: pointer; }
+
+.hamburger span { height: 3px; width: 25px; background: white; margin-bottom: 4px; border-radius: 5px; }
+
+.mobile-menu { display: none; flex-direction: column; background: #ff69b4; position: absolute; top: 60px; left: 0; width: 100%; padding: 1rem; }
+
+.mobile-menu a { color: white; padding: 0.5rem 0; }
+
+main { padding: 2rem; }
+
+section { margin-bottom: 3rem; }
+
+.produto-card { background: #fff0f5; border-radius: 12px; padding: 1rem; text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+
+.produto-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+
+footer { text-align: center; padding: 1rem; background: #eee; font-size: 0.9rem; }
+
+@media (max-width: 768px) { nav { display: none; } .hamburger { display: flex; } .mobile-menu.active { display: flex; } }
+
