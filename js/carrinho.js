@@ -5,6 +5,7 @@ function adicionarAoCarrinho(produto, preco, imagem) {
   // Adiciona o produto ao carrinho
   carrinho.push({ produto, preco, imagem });
   atualizarContadorCarrinho();
+  alert(`${produto} foi adicionado ao carrinho!`);
   atualizarMiniCarrinho();
 }
 
