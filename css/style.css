@@ -486,7 +486,7 @@ footer {
 }
 /* Estilo para o contêiner de notificações */
 #notificacao-container {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   z-index: 1000;
