@@ -148,15 +148,14 @@ z-index: 1000;
 main {
   scroll-behavior: smooth;
 }
-
+/*
 .pagina {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
   text-align: center;
-}
+}*/
 
 .pagina-conteudo {
   width: 100%
