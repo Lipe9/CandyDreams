@@ -37,8 +37,9 @@ header {
 }
 
 .logo-text {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: 'Lobster', cursive;
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
 nav {
