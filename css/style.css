@@ -55,7 +55,7 @@ nav a:hover {
   width: 30px;
   height: 25px;
   justify-content: center;
-  position: fixed;
+  position: relative;
 }
 
 .hamburger span {
