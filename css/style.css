@@ -116,7 +116,7 @@ nav a:hover {
 .mobile-menu {
   display: none;
   flex-direction: column;
-  background: #ff69b4;
+  background: #ff3e7f;
   position: fixed;
   top: 60px;
   left: 0;
