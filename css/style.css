@@ -47,6 +47,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+height: 30px
   z-index: 1000;
 }
 
@@ -83,7 +84,7 @@ nav a:hover {
   cursor: pointer;
   transition: transform 0.3s ease;
   width: 30px;
-  height: 35px;
+  height: 25px;
   justify-content: center;
   position: relative;
 z-index: 1000;
@@ -159,7 +160,7 @@ main {
 
 .pagina-conteudo1 {
     position: relative;
-    bottom: 500px
+    bottom: 300px
 }
 
 /* Produtos */
