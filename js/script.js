@@ -79,9 +79,37 @@ function atualizarContadorCarrinho() {
   contadorDesktop.textContent = carrinho.length;
   contadorMobile.textContent = carrinho.length;
 }
-
-// Exemplo para alternar o menu mobile
 function toggleMenu() {
   const mobileMenu = document.getElementById('mobileMenu');
   mobileMenu.classList.toggle('active');
+}
+
+function adicionarAoCarrinho(produto, preco) {
+  const imagem = document.querySelector(`img[alt="${produto}"]`).src;
+  carrinho.push({ produto, preco, imagem });
+  atualizarContadorCarrinho();
+  renderizarMiniCarrinho();
+  document.getElementById('miniCarrinho').style.display = 'block';
+}
+
+function renderizarMiniCarrinho() {
+  const container = document.getElementById('itensCarrinho');
+  container.innerHTML = '';
+
+  carrinho.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'item-carrinho';
+    div.innerHTML = `
+      <img src="${item.imagem}" alt="${item.produto}">
+      <div>
+        <strong>${item.produto}</strong><br>
+        R$ ${item.preco.toFixed(2)}
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function irParaCompra() {
+  window.location.href = 'compra.html';
 }
