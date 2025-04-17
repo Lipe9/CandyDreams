@@ -81,8 +81,8 @@ document.querySelectorAll('.produto-card').forEach((card) => {
     alert(`${productName} adicionado ao carrinho!`);
   });
 });
-
-let carrinho = [];
+ 
+      let carrinho = [];
 
 function adicionarAoCarrinho(produto, preco) {
   // Adiciona o produto ao carrinho
@@ -92,7 +92,15 @@ function adicionarAoCarrinho(produto, preco) {
 }
 
 function atualizarContadorCarrinho() {
-  // Atualiza o número de itens no ícone do carrinho
-  const contador = document.getElementById('cart-count');
-  contador.textContent = carrinho.length;
+  // Atualiza os contadores de itens no carrinho
+  const contadorDesktop = document.getElementById('cart-count');
+  const contadorMobile = document.getElementById('cart-count-mobile');
+  contadorDesktop.textContent = carrinho.length;
+  contadorMobile.textContent = carrinho.length;
+}
+
+// Exemplo para alternar o menu mobile
+function toggleMenu() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileMenu.classList.toggle('active');
 }
