@@ -1,10 +1,11 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Candy Dreams</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -15,58 +16,78 @@
       <a href="#servicos">Serviços</a>
       <a href="#produtos">Produtos</a>
     </nav>
-    <div class="hamburger" onclick="toggleMenu()">
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
   </header>
+
   <div class="mobile-menu" id="mobileMenu">
     <a href="#home">Início</a>
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
     <a href="#produtos">Produtos</a>
-  </div>  <main>
-    <section id="home">
-      <h1>Bem-vindo à Candy Dreams</h1>
-      <p>Doces que encantam, sabores que marcam!</p>
-    </section><section id="sobre">
-  <h2>Sobre Nós</h2>
-  <p>Somos apaixonados por doces e buscamos sempre levar qualidade e carinho em cada produto.</p>
-</section>
-
-<section id="servicos">
-  <h2>Serviços</h2>
-  <ul>
-    <li>Encomendas para festas</li>
-    <li>Doces personalizados</li>
-    <li>Kits presenteáveis</li>
-  </ul>
-</section>
-
-<section id="produtos">
-  <h2>Nossos Produtos</h2>
-  <div class="grid">
-    <div class="produto-card">
-      <img src="img/Brigadeiro (1).png" alt="Brigadeiro" width="100" />
-      <h3>Brigadeiro</h3>
-    </div>
-    <div class="produto-card">
-      <img src="img/Brownie.png" alt="Brownie" width="100" />
-      <h3>Brownie</h3>
-    </div>
-    <div class="produto-card">
-      <img src="img/Mousse.png" alt="Mousse" width="100" />
-      <h3>Mousse</h3>
-    </div>
   </div>
-</section>
 
-  </main>  <footer>
+  <main>
+    <section id="home" class="pagina">
+      <div class="pagina-conteudo">
+        <h1>Bem-vindo à Candy Dreams</h1>
+        <p>Doces que encantam, sabores que marcam!</p>
+      </div>
+    </section>
+
+    <section id="sobre" class="pagina">
+      <div class="pagina-conteudo">
+        <h2>Sobre Nós</h2>
+        <p>Somos apaixonados por doces e buscamos sempre levar qualidade e carinho em cada produto.</p>
+      </div>
+    </section>
+
+    <section id="servicos" class="pagina">
+      <div class="pagina-conteudo">
+        <h2>Serviços</h2>
+        <ul>
+          <li>Encomendas para festas</li>
+          <li>Doces personalizados</li>
+          <li>Kits presenteáveis</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="produtos" class="pagina">
+      <div class="pagina-conteudo">
+        <h2>Nossos Produtos</h2>
+        <div class="grid">
+          <div class="produto-card">
+            <img src="img/Brigadeiro (1).png" alt="Brigadeiro" width="100" />
+            <h3>Brigadeiro</h3>
+          </div>
+          <div class="produto-card">
+            <img src="img/Brownie.png" alt="Brownie" width="100" />
+            <h3>Brownie</h3>
+          </div>
+          <div class="produto-card">
+            <img src="img/Mousse.png" alt="Mousse" width="100" />
+            <h3>Mousse</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <p>&copy; 2025 Candy Dreams. Todos os direitos reservados.</p>
-  </footer>  <script>
+  </footer>
+
+  <script>
     function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('active');
+      const menu = document.getElementById('mobileMenu');
+      const hamburger = document.getElementById('hamburger');
+      menu.classList.toggle('active');
+      hamburger.classList.toggle('active');
     }
-  </script></body>
+  </script>
+</body>
 </html>
