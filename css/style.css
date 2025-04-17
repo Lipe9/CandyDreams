@@ -49,10 +49,6 @@ header {
   width: 100%;
   z-index: 1000;
 }
-.banner-container, .carousel-container {
-  z-index: 0;
-  position: relative;
-}
 
 .logo-container {
   display: flex;
@@ -282,13 +278,13 @@ footer {
   margin-top: 0;
 }
 
-.banner-container {
+.banner-container .carousel-container{
   width: 100vw;
   height: 400px;
   overflow: hidden;
   position: relative;
-  top: 60px;
-  z-index: 1;
+  top: 40px;
+  z-index: 0;
   margin: 0;
   padding: 0;
 }
