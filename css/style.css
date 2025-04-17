@@ -265,6 +265,36 @@ footer {
 .botao-destaque:hover {
   background-color: #c71585;
 }
+.home-banner {
+  padding-top: 60px; /* espaço do header fixo */
+  margin-top: 0;
+}
+
+.banner-container {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  max-height: 400px;
+  margin: 0;
+}
+
+.slider {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slide {
+  width: 100vw;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
