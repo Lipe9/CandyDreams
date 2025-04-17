@@ -435,3 +435,41 @@ footer {
   position: absolute;
   right: 510px
 }
+.mini-carrinho {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  width: 300px;
+  background: #fff0f5;
+  border: 2px solid #ff3e7f;
+  border-radius: 12px;
+  padding: 1rem;
+  z-index: 999;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.mini-carrinho h3 {
+  margin-bottom: 0.5rem;
+  color: #c71585;
+}
+
+.itens-carrinho {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.item-carrinho img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+}
