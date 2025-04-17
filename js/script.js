@@ -81,3 +81,18 @@ document.querySelectorAll('.produto-card').forEach((card) => {
     alert(`${productName} adicionado ao carrinho!`);
   });
 });
+
+let carrinho = [];
+
+function adicionarAoCarrinho(produto, preco) {
+  // Adiciona o produto ao carrinho
+  carrinho.push({ produto, preco });
+  atualizarContadorCarrinho();
+  alert(`${produto} foi adicionado ao carrinho!`);
+}
+
+function atualizarContadorCarrinho() {
+  // Atualiza o número de itens no ícone do carrinho
+  const contador = document.getElementById('cart-count');
+  contador.textContent = carrinho.length;
+}
