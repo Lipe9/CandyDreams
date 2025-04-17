@@ -16,8 +16,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background: #ff69b4;
+  padding: 0.8rem 2rem;
+  background: #ff3e7f; /* Rosa vibrante */
   color: white;
   position: fixed;
   top: 0;
@@ -25,9 +25,20 @@ header {
   z-index: 1000;
 }
 
-.logo {
-  font-weight: bold;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-img {
+  width: 40px;
+  height: auto;
+}
+
+.logo-text {
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 nav {
