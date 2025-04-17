@@ -317,11 +317,7 @@ footer {
   padding: 0;
 }
 
-.inicio-info {
-  margin-top: 100px;
-  padding: 100px;
-  text-align: center;
-}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
