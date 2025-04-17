@@ -19,7 +19,17 @@
   <a href="#home1">Início</a>
   <a href="#sobre">Sobre</a>
   <a href="#produtos">Produtos</a>
-  <a href="login.html">Login</a>
+  <a href="login.html"><div id="login">class="link-nav">Login</a></div>
+            <li id="user-profile" style="display: none;">
+    <div class="user-info">
+        <span class="material-symbols-outlined">account_circle</span>
+        <span id="username"></span>
+    </div>
+            </li>
+            <li id="logout-button" style="display: none;">
+                <button onclick="logout()">Sair</button>
+            </li>    
+
   <a href="#carrinho" class="carrinho-link">
   <i class="fas fa-shopping-cart"></i>
   <span id="cart-count" class="cart-count">0</span>
