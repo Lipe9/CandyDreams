@@ -62,24 +62,13 @@ function moveSlide(step) {
 setInterval(() => moveSlide(1), 5000); // troca automática a cada 5s
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    const user = JSON.parse(localStorage.getItem("user"));
 
-    const loginElement = document.getElementById("login");
-    const userProfile = document.getElementById("user-profile");
-    const logoutButton = document.getElementById("logout-button");
-    const usernameElement = document.getElementById("username");
-
-    if (isLoggedIn && user) {
-        loginElement.style.display = "none"; // Oculta o botão de login
-        userProfile.style.display = "flex"; // Exibe o perfil do usuário
-        logoutButton.style.display = "block"; // Exibe o botão de logout
-        usernameElement.textContent = user.nome; // Mostra o nome do usuário
+  document.addEventListener("DOMContentLoaded", function () {
+    const username = localStorage.getItem("username");
+    if (username) {
+      const userInfo = document.getElementById("user-info");
+      const userDisplay = document.getElementById("username-display");
+      userDisplay.textContent = username;
+      userInfo.style.display = "inline-block";
     }
-
-    logoutButton.addEventListener("click", () => {
-        localStorage.setItem("isLoggedIn", "false"); // Remove o estado logado
-        window.location.href = "login.html"; // Redireciona para a página de login
-    });
-});
+  });
