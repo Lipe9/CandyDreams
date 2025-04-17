@@ -289,6 +289,12 @@ footer {
   width: 100vw;
   flex-shrink: 0;
 }
+.slider {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  animation: slide 12s infinite;
+}
 .slide img {
   width: 100%;
   height: 100%;
