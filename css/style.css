@@ -159,8 +159,8 @@ main {
 }
 
 .pagina-conteudo {
-  max-width: 800px;
-  margin: 0 auto;
+  widt: 100%
+  margin-top: 40px;
 }
 
 /* Produtos */
