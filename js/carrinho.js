@@ -77,3 +77,33 @@ carrinhoLinkMobile.addEventListener('click', (e) => {
 });
 
 fecharCarrinho.addEventListener('click', fecharMiniCarrinho);
+
+
+// Função para exibir notificações personalizadas
+function exibirNotificacao(mensagem) {
+  const container = document.getElementById('notificacao-container');
+
+  // Cria o elemento da notificação
+  const notificacao = document.createElement('div');
+  notificacao.classList.add('notificacao');
+  notificacao.textContent = mensagem;
+
+  // Adiciona a notificação ao contêiner
+  container.appendChild(notificacao);
+
+  // Remove a notificação após 4 segundos
+  setTimeout(() => {
+    notificacao.remove();
+  }, 4000);
+}
+
+// Atualize a função adicionarAoCarrinho para usar a notificação
+function adicionarAoCarrinho(produto, preco, imagem) {
+  // Adiciona o produto ao carrinho
+  carrinho.push({ produto, preco, imagem });
+  atualizarContadorCarrinho();
+  atualizarMiniCarrinho();
+
+  // Exibe a notificação personalizada
+  exibirNotificacao(`${produto} foi adicionado ao carrinho!`);
+}
