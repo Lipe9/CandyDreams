@@ -5,15 +5,12 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
 }
 
 body {
   background: #fff0f5;
   color: #333;
   line-height: 1.6;
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   -webkit-tap-highlight-color: transparent;
 }
@@ -40,7 +37,6 @@ header {
 
 .logo-img {
   width: 40px;
-  height: auto;
 }
 
 .logo-text {
@@ -78,7 +74,6 @@ nav a:hover {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  transition: transform 0.3s ease;
   width: 30px;
   height: 25px;
   justify-content: center;
@@ -128,77 +123,19 @@ nav a:hover {
   padding: 0.5rem 0;
 }
 
-/* Conteúdo principal */
-main {
-  scroll-behavior: smooth;
-}
-
-.pagina {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  text-align: center;
-}
-
-.pagina-conteudo {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Produtos */
-.produto-card {
-  background: #ffffff;
-  border-radius: 15px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.produto-card:hover {
-  transform: translateY(-8px);
-}
-
-img {
-  border-radius: 5px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 1rem;
-}
-
-.preco {
-  font-weight: 600;
-  color: #c71585;
-  margin-top: 0.5rem;
-}
-
-/* Rodapé */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eee;
-  font-size: 0.9rem;
-}
-
-/* Banner e Carrossel */
-.banner-container, .carousel-container {
+/* Banner / Carrossel */
+.banner-container {
   width: 100vw;
-  height: 35vh;
+  height: 250px;
   overflow: hidden;
   position: relative;
-  top: 50px; /* reduzido de 60px */
-  z-index: 0; /* abaixo do header */
+  top: 60px;
+  z-index: 0;
   margin: 0;
   padding: 0;
 }
 
-.slider, .carousel {
+.slider {
   display: flex;
   width: 300%;
   height: 100%;
@@ -210,11 +147,30 @@ footer {
   flex-shrink: 0;
 }
 
-.slide img, .carousel img {
+.slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+}
+
+/* Botões do banner */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.carousel-controls button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
 }
 
 /* Animação do carrossel */
@@ -228,7 +184,7 @@ footer {
 /* Mensagem de boas-vindas */
 .inicio-info {
   margin-top: 0.5rem;
-  padding: 1.5rem 1rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -249,7 +205,46 @@ footer {
   background-color: #c71585;
 }
 
-/* Responsividade */
+/* Produtos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.produto-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-8px);
+}
+
+img {
+  border-radius: 5px;
+}
+
+.preco {
+  font-weight: 600;
+  color: #c71585;
+  margin-top: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
   nav {
     display: none;
@@ -268,7 +263,7 @@ footer {
   }
 
   .banner-container {
-    height: 25vh;
+    height: 200px;
   }
 
   .slide img {
