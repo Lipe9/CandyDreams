@@ -352,11 +352,11 @@ footer {
 
 /* Espaçamento entre o menu e o carrossel */
 .carousel-container {
-  margin-top: 40px;
+  margin-top: 80px;
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-height: 300px;
+  height 100%;
 }
 
 /* Carrossel com transição suave */
