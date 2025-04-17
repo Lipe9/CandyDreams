@@ -137,6 +137,7 @@ z-index: 1000;
   width: 100%;
   padding: 1rem;
   z-index: 1000;
+align-items: center;
 }
 
 .mobile-menu a {
