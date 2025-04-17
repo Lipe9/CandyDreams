@@ -1,31 +1,109 @@
-// Selecionando o formulário e elementos necessários
-const form = document.querySelector("form");
-const emailInput = document.getElementById("email");
-const senhaInput = document.getElementById("senha");
+const registerButton = document.getElementById("register");
+const loginButton = document.getElementById("login");
+const container = document.getElementById("container");
 
-// Função de validação do formulário
-function validateForm(event) {
-  event.preventDefault(); // Evita o envio do formulário sem validação
+registerButton.addEventListener("click", () => {
+  container.classList.add("right-panel-active");
+});
 
-  const email = emailInput.value.trim();
-  const senha = senhaInput.value.trim();
+loginButton.addEventListener("click", () => {
+  container.classList.remove("right-panel-active");
+});
 
-  // Validação de e-mail
-  if (!email || !/\S+@\S+\.\S+/.test(email)) {
-    alert("Por favor, insira um e-mail válido.");
-    return;
-  }
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("login-form");
+  
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); 
+  
+    const username = document.getElementById("nm-usuario1").value;
+    const password = document.getElementById("senha1").value;
+  
+    if (username !== "" && password !== "") {
+      window.location.href = "index.html"; 
+    } else {
+  
+      alert("Preencha todos os campos!");
+  
+      }
+    });
+  });
 
-  // Validação de senha
-  if (!senha || senha.length < 6) {
-    alert("A senha deve ter pelo menos 6 caracteres.");
-    return;
-  }
 
-  // Aqui você pode adicionar a lógica para enviar o formulário, como uma requisição para o servidor
-  alert("Login bem-sucedido!");
-  form.reset(); // Limpa os campos do formulário após login bem-sucedido
-}
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("rg-form");
+    
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); 
+    
+      const username = document.getElementById("nm-usuario").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("senha").value;
+    
+      if (username !== "" && email != "" && password !== "") {
+        window.location.href = "index.html"; 
+      } else {
+    
+        alert("Preencha todos os campos!");
+    
+        }
+      });
+    });
 
-// Evento para enviar o formulário
-form.addEventListener("submit", validateForm);
+    function togglePasswordVisibility() {
+      const campoSenha = document.getElementById('senha');
+      const eyeIconOpen = document.getElementById('eye-icon-open');
+      const eyeIconClosed = document.getElementById('eye-icon-closed');
+      
+     
+    
+      if (campoSenha.type === 'password') {
+        campoSenha.type = 'text';
+        eyeIconOpen.style.display = 'none';
+        eyeIconClosed.style.display = 'block';
+     
+        
+      } else {
+        campoSenha.type = 'password';
+        eyeIconOpen.style.display = 'block';
+        eyeIconClosed.style.display = 'none';
+      }
+    }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const registerForm = document.getElementById("rg-form");
+    const loginForm = document.getElementById("login-form");
+
+    // Salvando o registro
+    registerForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const nome = document.getElementById("nm-usuario").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const senha = document.getElementById("senha").value.trim();
+
+        if (nome && email && senha) {
+            localStorage.setItem("user", JSON.stringify({ nome, email, senha }));
+            alert("Usuário cadastrado com sucesso!");
+        } else {
+            alert("Preencha todos os campos.");
+        }
+    });
+
+    // Validação de login
+    loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const nomeLogin = document.getElementById("nm-usuario1").value.trim();
+        const senhaLogin = document.getElementById("senha1").value.trim();
+        const user = JSON.parse(localStorage.getItem("user"));
+
+        if (user && user.nome === nomeLogin && user.senha === senhaLogin) {
+            alert("Login bem-sucedido!");
+            localStorage.setItem("isLoggedIn", "true");
+            window.location.href = "index.html"; // Redireciona para a página inicial
+        } else {
+            alert("Nome ou senha incorretos.");
+        }
+    });
+});
