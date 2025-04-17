@@ -49,3 +49,14 @@ function toggleMenu() {
       }
     });
   });
+
+
+const carousel = document.getElementById('carousel');
+let index = 0;
+
+function moveSlide(step) {
+  index = (index + step + 3) % 3;
+  carousel.style.transform = `translateX(-${index * 100}vw)`;
+}
+
+setInterval(() => moveSlide(1), 5000); // troca automática a cada 5s
