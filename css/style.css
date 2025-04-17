@@ -386,3 +386,50 @@ footer {
   padding: 0.5rem;
   cursor: pointer;
 }
+
+.carrinho-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: #ff3e7f;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Botão de comprar */
+.botao-comprar {
+  background-color: #ff3e7f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-comprar:hover {
+  background-color: #c71585;
+}
+
+/* Outros estilos já existentes... */
