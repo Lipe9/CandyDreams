@@ -532,3 +532,15 @@ footer {
     transform: translateY(-10px);
   }
 }
+.logout-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.logout-btn:hover {
+  text-decoration: underline;
+}
