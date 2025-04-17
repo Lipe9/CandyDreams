@@ -17,13 +17,32 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Cabeçalho e navegação */
+nav a {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+nav a,
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid transparent;
+  font-weight: 600;
+  transition: border-color 0.3s ease;
+}
+
+nav a.active,
+.mobile-menu a.active {
+  border-bottom: 2px solid white;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 2rem;
-  background: #ff3e7f;
+  background: #ff3e7f; /* Rosa vibrante */
   color: white;
   position: fixed;
   top: 0;
@@ -53,25 +72,11 @@ nav {
   gap: 1rem;
 }
 
-nav a {
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-nav a.active {
-  border-bottom: 2px solid white;
-}
-
 nav a:hover {
   color: #ffe6f0;
 }
 
-/* Menu Mobile */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -135,7 +140,144 @@ nav a:hover {
   padding: 0.5rem 0;
 }
 
-/* Banner/Carrossel */
+/* Conteúdo principal */
+main {
+  scroll-behavior: smooth;
+}
+
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.pagina-conteudo {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Produtos */
+.produto-card {
+  background: #fff0f5;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+img {
+  border-radius: 5px;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.produto-card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-8px);
+}
+
+.preco {
+  font-weight: 600;
+  color: #c71585;
+  margin-top: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
+}
+
+/* Banner */
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  max-height: 400px;
+}
+
+.slider {
+  display: flex;
+  width: 300%;
+  animation: slide 12s infinite;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0%, 25% {
+    transform: translateX(0);
+  }
+  33%, 58% {
+    transform: translateX(-100%);
+  }
+  66%, 91% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.inicio-info {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.botao-destaque {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #ff3e7f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.botao-destaque:hover {
+  background-color: #c71585;
+}
+
+.home-banner {
+  padding-top: 60px;
+  margin-top: 0;
+}
+
 .banner-container {
   width: 100vw;
   height: 400px;
@@ -166,7 +308,67 @@ nav a:hover {
   display: block;
 }
 
-/* Botões de controle do carrossel */
+.home-banner {
+  margin: 0;
+  padding: 0;
+}
+
+.inicio-info {
+  margin-top: 1rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .banner-container {
+    height: 250px;
+  }
+
+  .slide img {
+    height: 250px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+
+  .pagina {
+    padding: 4rem 1rem;
+  }
+}
+
+/* Espaçamento entre o menu e o carrossel */
+.carousel-container {
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 300px;
+}
+
+/* Carrossel com transição suave */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+}
+
+/* Imagens do carrossel */
+.carousel img {
+  width: 100vw;
+  object-fit: cover;
+}
+
+/* Botões de navegação */
 .carousel-controls {
   position: absolute;
   top: 50%;
@@ -183,128 +385,4 @@ nav a:hover {
   font-size: 1.5rem;
   padding: 0.5rem;
   cursor: pointer;
-}
-
-/* Conteúdo inicial */
-.inicio-info {
-  margin-top: 1rem;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-.botao-destaque {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #ff3e7f;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.botao-destaque:hover {
-  background-color: #c71585;
-}
-
-/* Seções */
-main {
-  scroll-behavior: smooth;
-}
-
-.pagina {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  text-align: center;
-}
-
-.pagina-conteudo {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Produtos */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 1rem;
-}
-
-.produto-card {
-  background: #ffffff;
-  border-radius: 15px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.produto-card:hover {
-  transform: translateY(-8px);
-}
-
-.produto-card img {
-  border-radius: 5px;
-}
-
-.preco {
-  font-weight: 600;
-  color: #c71585;
-  margin-top: 0.5rem;
-}
-
-/* Rodapé */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eee;
-  font-size: 0.9rem;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  nav {
-    display: none;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .mobile-menu.active {
-    display: flex;
-  }
-
-  .pagina {
-    padding: 4rem 1rem;
-  }
-
-  .banner-container {
-    height: 250px;
-  }
-
-  .slide img {
-    height: 250px;
-  }
-}
-
-/* Animação do carrossel */
-@keyframes slide {
-  0%, 25% {
-    transform: translateX(0);
-  }
-  33%, 58% {
-    transform: translateX(-100%);
-  }
-  66%, 91% {
-    transform: translateX(-200%);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }
