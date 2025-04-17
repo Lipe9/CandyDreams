@@ -160,7 +160,10 @@ main {
 
 .pagina-conteudo {
   width: 100%
-  margin-top: 70px;
+  margin-top: -50px;
+}
+.inicio-info {
+  text-align: center;
 }
 
 /* Produtos */
