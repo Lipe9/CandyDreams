@@ -427,32 +427,3 @@ footer {
 .botao-comprar:hover {
   background-color: #c71585;
 }
-.mobile-menu .carrinho-link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.mobile-menu .cart-icon {
-  width: 30px;
-  height: 30px;
-}
-
-.mobile-menu .cart-count {
-  position: absolute;
-  top: 5px; /* Ajuste para alinhar corretamente */
-  right: 5px; /* Ajuste para alinhar corretamente */
-  background: #ff3e7f;
-  color: white;
-  font-weight: bold;
-  font-size: 12px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10; /* Para garantir que fique acima do ícone */
-}
