@@ -1,5 +1,20 @@
+function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const hamburger = document.getElementById('hamburger');
+    menu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  }
 
-  function toggleMenu() {
+  // Fecha o menu ao clicar em um link mobile
+  document.querySelectorAll('.mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.remove('active');
+      document.getElementById('hamburger').classList.remove('active');
+    });
+  });
+  
+
+function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
     const hamburger = document.getElementById('hamburger');
     menu.classList.toggle('active');
