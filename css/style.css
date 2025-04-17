@@ -340,3 +340,44 @@ footer {
     padding: 4rem 1rem;
   }
 }
+
+/* Espaçamento entre o menu e o carrossel */
+.carousel-container {
+  margin-top: 60px; /* ajuste conforme a altura real do menu */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 300px;
+}
+
+/* Carrossel com transição suave */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+}
+
+/* Imagens do carrossel */
+.carousel img {
+  width: 100vw;
+  object-fit: cover;
+}
+
+/* Botões de navegação */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
