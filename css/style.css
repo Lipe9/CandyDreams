@@ -12,7 +12,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -20,8 +19,9 @@ header {
   padding: 1rem 2rem;
   background: #ff69b4;
   color: white;
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 1000;
 }
 
