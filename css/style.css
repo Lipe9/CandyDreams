@@ -49,6 +49,10 @@ header {
   width: 100%;
   z-index: 1000;
 }
+.banner-container, .carousel-container {
+  z-index: 0;
+  position: relative;
+}
 
 .logo-container {
   display: flex;
