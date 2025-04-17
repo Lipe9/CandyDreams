@@ -1,1 +1,120 @@
-hahah
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f4fa;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 90vh;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.left-panel {
+  flex: 1;
+  background-color: #b38bfa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-panel img {
+  width: 80%;
+  max-width: 400px;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-container h1 {
+  color: #b38bfa;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.form-container h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.forgot {
+  font-size: 14px;
+  color: #b38bfa;
+  text-decoration: none;
+}
+
+button {
+  background-color: #b38bfa;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #a174ec;
+}
+
+.register {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.register a {
+  color: #b38bfa;
+  text-decoration: none;
+  font-weight: 600;
+}
