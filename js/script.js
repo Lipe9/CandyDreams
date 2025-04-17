@@ -62,47 +62,35 @@ function moveSlide(step) {
 setInterval(() => moveSlide(1), 5000); // troca automática a cada 5s
 
 
-
   document.addEventListener("DOMContentLoaded", () => {
-  const user = JSON.parse(localStorage.getItem("user"));
-  const isLoggedIn = localStorage.getItem("isLoggedIn");
+    const user = JSON.parse(localStorage.getItem("user"));
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
 
-  // Desktop
-  const userInfo = document.getElementById("user-info");
-  const usernameDisplay = document.getElementById("username-display");
-  const logoutBtn = document.getElementById("logout-btn");
+    const userInfo = document.getElementById("user-info");
+    const usernameDisplay = document.getElementById("username-display");
+    const logoutBtn = document.getElementById("logout-btn");
 
-  // Mobile
-  const userInfoMobile = document.getElementById("user-info-mobile");
-  const usernameDisplayMobile = document.getElementById("username-display-mobile");
-  const logoutBtnMobile = document.getElementById("logout-btn-mobile");
+    const userInfoMobile = document.getElementById("user-info-mobile");
+    const usernameDisplayMobile = document.getElementById("username-display-mobile");
+    const logoutBtnMobile = document.getElementById("logout-btn-mobile");
 
-  const loginLink = document.getElementById("login-link");
+    const loginLink = document.getElementById("login-link");
 
-  if (isLoggedIn === "true" && user) {
-    // Mostra usuário - Desktop
-    if (userInfo && usernameDisplay) {
-      userInfo.style.display = "inline-block";
-      usernameDisplay.textContent = user.nome;
+    if (isLoggedIn === "true" && user && user.nome) {
+      if (userInfo) userInfo.style.display = "inline-flex";
+      if (usernameDisplay) usernameDisplay.textContent = user.nome;
+
+      if (userInfoMobile) userInfoMobile.style.display = "inline-flex";
+      if (usernameDisplayMobile) usernameDisplayMobile.textContent = user.nome;
+
+      if (loginLink) loginLink.style.display = "none";
+
+      const logout = () => {
+        localStorage.removeItem("isLoggedIn");
+        location.reload();
+      };
+
+      if (logoutBtn) logoutBtn.addEventListener("click", logout);
+      if (logoutBtnMobile) logoutBtnMobile.addEventListener("click", logout);
     }
-
-    // Mostra usuário - Mobile
-    if (userInfoMobile && usernameDisplayMobile) {
-      userInfoMobile.style.display = "inline-block";
-      usernameDisplayMobile.textContent = user.nome;
-    }
-
-    // Esconde o botão de login
-    if (loginLink) loginLink.style.display = "none";
-
-    // Função logout
-    const logout = () => {
-      localStorage.removeItem("isLoggedIn");
-      window.location.reload();
-    };
-
-    // Eventos de logout
-    if (logoutBtn) logoutBtn.addEventListener("click", logout);
-    if (logoutBtnMobile) logoutBtnMobile.addEventListener("click", logout);
-  }
-});
+  });
