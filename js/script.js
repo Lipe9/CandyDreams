@@ -62,25 +62,6 @@ function moveSlide(step) {
 setInterval(() => moveSlide(1), 5000); // troca automática a cada 5s
 
 // Carrinho 
-let cart = [];
-
-function addToCart(product) {
-  cart.push(product);
-  updateCartCount();
-}
-
-function updateCartCount() {
-  const cartCountElement = document.getElementById('cart-count');
-  cartCountElement.textContent = cart.length;
-}
-
-document.querySelectorAll('.produto-card').forEach((card) => {
-  card.addEventListener('click', () => {
-    const productName = card.querySelector('h3').textContent;
-    addToCart(productName);
-    alert(`${productName} adicionado ao carrinho!`);
-  });
-});
  
       let carrinho = [];
 
