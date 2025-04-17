@@ -98,7 +98,7 @@ nav a:hover {
   display: none;
   flex-direction: column;
   background: #ff69b4;
-  position: absolute;
+  position: fixed;
   top: 60px;
   left: 0;
   width: 100%;
