@@ -4,14 +4,116 @@
   <meta charset="UTF-8" />
   <title>Finalizar Compra - Candy Dreams</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin-top: 1.5rem;
+    }
+
+    label {
+      font-weight: bold;
+      color: #c71585;
+    }
+
+    input, select {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .grupo {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .grupo > div {
+      flex: 1;
+    }
+
+    .pagamento-opcoes {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .pagamento-opcoes label {
+      font-weight: normal;
+    }
+
+    .botao-destaque {
+      background: #ff3e7f;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .botao-destaque:hover {
+      background: #e0306e;
+    }
+  </style>
 </head>
 <body>
   <main class="pagina">
     <div class="pagina-conteudo">
       <h2>Finalizar Compra</h2>
-      <p>Em breve você poderá escolher forma de pagamento e entrega.</p>
-      <a href="index.html" class="botao-destaque">Voltar à loja</a>
+      <form onsubmit="finalizarCompra(event)">
+        <h3>Informações de Entrega</h3>
+        <input type="text" placeholder="Nome completo" required />
+        <input type="text" placeholder="Endereço" required />
+        <div class="grupo">
+          <div><input type="text" placeholder="Cidade" required /></div>
+          <div><input type="text" placeholder="Estado" required /></div>
+        </div>
+        <input type="text" placeholder="CEP" required />
+
+        <h3>Método de Pagamento</h3>
+        <div class="pagamento-opcoes">
+          <input type="radio" name="pagamento" id="pix" value="pix" checked />
+          <label for="pix">Pix</label>
+
+          <input type="radio" name="pagamento" id="cartao" value="cartao" />
+          <label for="cartao">Cartão de Crédito</label>
+
+          <input type="radio" name="pagamento" id="boleto" value="boleto" />
+          <label for="boleto">Boleto</label>
+        </div>
+
+        <div id="detalhesCartao" style="display: none;">
+          <input type="text" placeholder="Número do cartão" />
+          <div class="grupo">
+            <div><input type="text" placeholder="Validade (MM/AA)" /></div>
+            <div><input type="text" placeholder="CVV" /></div>
+          </div>
+          <input type="text" placeholder="Nome no cartão" />
+        </div>
+
+        <button type="submit" class="botao-destaque">Finalizar Pedido</button>
+      </form>
     </div>
   </main>
+
+  <script>
+    const radios = document.querySelectorAll('input[name="pagamento"]');
+    const detalhesCartao = document.getElementById('detalhesCartao');
+
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        detalhesCartao.style.display = radio.value === 'cartao' ? 'block' : 'none';
+      });
+    });
+
+    function finalizarCompra(event) {
+      event.preventDefault();
+      alert("Pedido finalizado com sucesso! Obrigado por comprar na Candy Dreams!");
+      window.location.href = 'index.html';
+    }
+  </script>
 </body>
 </html>
