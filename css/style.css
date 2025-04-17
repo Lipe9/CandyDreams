@@ -269,34 +269,55 @@ footer {
   padding-top: 60px; /* espaço do header fixo */
   margin-top: 0;
 }
-
 .banner-container {
-  width: 100vw;
-  overflow: hidden;
   position: relative;
-  max-height: 400px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
   margin: 0;
+  padding: 0;
 }
-
 .slider {
   display: flex;
   width: 300%;
+  height: 100%;
   animation: slide 12s infinite;
 }
-
 .slide {
   width: 100vw;
   flex-shrink: 0;
 }
-
 .slide img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
+.home-banner {
+  margin: 0;
+  padding: 0;
+}
+
+.inicio-info {
+  margin-top: 1rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
 /* Responsividade */
+@media (max-width: 768px) {
+  .banner-container {
+    height: 250px;
+  }
+
+  .slide img {
+    height: 250px;
+  }
+}
 @media (max-width: 768px) {
   nav {
     display: none;
