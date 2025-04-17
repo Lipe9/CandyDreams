@@ -136,7 +136,7 @@ z-index: 1000;
   left: 0;
   width: 100%;
   padding: 1rem;
-z-index: 1000;
+  z-index: 1000;
 }
 
 .mobile-menu a {
@@ -348,7 +348,7 @@ footer {
 
 /* Espaçamento entre o menu e o carrossel */
 .carousel-container {
-  margin-top: 80px;
+  margin-top: 95px;
   position: relative;
   overflow: hidden;
   width: 100%;
