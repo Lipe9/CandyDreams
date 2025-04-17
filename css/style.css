@@ -22,6 +22,20 @@ nav a {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+nav a,
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid transparent;
+  font-weight: 600;
+  transition: border-color 0.3s ease;
+}
+
+nav a.active,
+.mobile-menu a.active {
+  border-bottom: 2px solid white;
+}
 
 header {
   display: flex;
