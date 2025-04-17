@@ -410,10 +410,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-#cart-count-mobile{
-positivon: relative;
-right: 100px
-}
 .botao-comprar {
   background-color: #ff3e7f;
   color: white;
