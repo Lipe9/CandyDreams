@@ -137,7 +137,6 @@ z-index: 1000;
   width: 100%;
   padding: 1rem;
   z-index: 1000;
-align-items: center;
 }
 
 .mobile-menu a {
@@ -434,5 +433,5 @@ footer {
 
 .mobile-menu .cart-count {
   position: absolute;
-  right: 200px
+  right: 400px
 }
