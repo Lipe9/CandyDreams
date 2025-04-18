@@ -131,7 +131,7 @@
 }
 
 #chatbot-toggle {
-  background-color: #ff69b4;
+  background: #ff3e7f; /* Rosa vibrante */
   border: none;
   border-radius: 50%;
   width: 60px;
@@ -145,7 +145,7 @@
 .chatbot-box {
   display: none;
   flex-direction: column;
-  width: 300px;
+  width: 350px;
   height: 400px;
   background: white;
   border-radius: 16px;
