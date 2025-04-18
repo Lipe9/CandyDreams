@@ -618,3 +618,17 @@ border: none;
     opacity: 1;
   }
 }
+
+
+/* Produtos responsivos */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 por linha em tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 por linha em celulares */
+  }
+}
