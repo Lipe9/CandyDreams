@@ -621,4 +621,12 @@ img {
     opacity: 1;
   }
 }
-
+#limparCarrinho{
+margin-top: 10px;
+background-color: #e74c3c;
+color: white;  
+padding: 5px 10px;
+border: none; 
+border-radius: 5px;
+cursor: pointer;
+}
