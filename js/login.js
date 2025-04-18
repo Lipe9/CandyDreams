@@ -1,17 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const loginBtn = document.getElementById('login-btn');
-  const userInfo = document.getElementById('user-info');
-  const userName = document.getElementById('user-name');
+  const loginForm = document.getElementById('login-form');
+  const registerForm = document.getElementById('register-form');
+  const switchToRegister = document.getElementById('switch-to-register');
+  const switchToLogin = document.getElementById('switch-to-login');
+  const formTitle = document.getElementById('form-title');
 
-  const usuario = JSON.parse(localStorage.getItem('usuarioLogado'));
+  // Trocar entre login e cadastro
+  switchToRegister.onclick = () => {
+    loginForm.classList.add('hidden');
+    registerForm.classList.remove('hidden');
+    formTitle.textContent = "Cadastro";
+  };
 
-  if (usuario) {
-    loginBtn.classList.add('hidden');
-    userInfo.classList.remove('hidden');
-    userName.textContent = usuario.nome;
-  }
+  switchToLogin.onclick = () => {
+    registerForm.classList.add('hidden');
+    loginForm.classList.remove('hidden');
+    formTitle.textContent = "Login";
+  };
 
-  loginBtn.addEventListener('click', () => {
-    window.location.href = 'login.html';
-  });
+  // Cadastro
+  registerForm.onsubmit = (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById('register-name').value;
+    const email = document.getElementById('register-email').value;
+    const senha = document.getElementById('register-password').value;
+
+    const usuario = { nome, email, senha };
+    localStorage.setItem('usuarioCadastrado', JSON.stringify(usuario));
+    localStorage.setItem('usuarioLogado', JSON.stringify({ nome }));
+
+    window.location.href = 'index.html';
+  };
+
+  // Login
+  loginForm.onsubmit = (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById('login-email').value;
+    const senha = document.getElementById('login-password').value;
+
+    const usuario = JSON.parse(localStorage.getItem('usuarioCadastrado'));
+
+    if (usuario && usuario.email === email && usuario.senha === senha) {
+      localStorage.setItem('usuarioLogado', JSON.stringify({ nome: usuario.nome }));
+      window.location.href = 'index.html';
+    } else {
+      alert('Email ou senha inválidos!');
+    }
+  };
 });
