@@ -329,7 +329,7 @@ form input {
 html, body {
   height: 100%;
   margin: 0;
-  overflow: hidden; /* impede a rolagem da página */
+ /* impede a rolagem da página */
   display: flex;
   justify-content: center;
   align-items: center;
