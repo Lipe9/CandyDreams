@@ -103,7 +103,7 @@ nav a:hover {
   position: absolute;
   left: 0;
   transition: all 0.3s ease;
-z-index: 1000;
+  /*z-index: 1000;*/
 }
 
 .hamburger span:nth-child(1) {
