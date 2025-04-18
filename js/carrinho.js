@@ -107,3 +107,60 @@ function adicionarAoCarrinho(produto, preco, imagem) {
   // Exibe a notificação personalizada
   exibirNotificacao(`${produto} foi adicionado ao carrinho!`);
 }
+
+let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+function salvarCarrinho() {
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  atualizarContador();
+}
+
+function atualizarContador() {
+  const totalItens = carrinho.length;
+  document.getElementById('cart-count').innerText = totalItens;
+  document.getElementById('cart-count-mobile').innerText = totalItens;
+}
+
+function adicionarAoCarrinho(nome, preco, imagem) {
+  carrinho.push({ nome, preco, imagem });
+  salvarCarrinho();
+  mostrarCarrinho();
+}
+
+function removerItem(index) {
+  carrinho.splice(index, 1);
+  salvarCarrinho();
+  mostrarCarrinho();
+}
+
+function mostrarCarrinho() {
+  const lista = document.getElementById('itensCarrinho');
+  const total = document.getElementById('totalCarrinho');
+  lista.innerHTML = '';
+  let totalValor = 0;
+
+  carrinho.forEach((item, index) => {
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <span>${item.nome} - R$ ${item.preco.toFixed(2)}</span>
+        <button onclick="removerItem(${index})" style="background:none; border:none; color:red; font-weight:bold; cursor:pointer;">X</button>
+      </div>
+    `;
+    lista.appendChild(li);
+    totalValor += item.preco;
+  });
+
+  total.innerText = `R$ ${totalValor.toFixed(2)}`;
+}
+
+// Mostrar carrinho ao abrir a página
+document.addEventListener('DOMContentLoaded', () => {
+  mostrarCarrinho();
+  atualizarContador();
+});
+
+// Botão de fechar carrinho
+document.getElementById('fecharCarrinho').addEventListener('click', () => {
+  document.getElementById('miniCarrinho').style.display = 'none';
+});
