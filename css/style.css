@@ -283,7 +283,7 @@ img {
   padding: 2rem 1rem;
 }
 
-.botao-destaque {
+.botao-destaque , #limparCarrinho {
   display: inline-block;
   margin-top: 1rem;
   background-color: #ff3e7f;
@@ -620,13 +620,4 @@ img {
     transform: scale(1);
     opacity: 1;
   }
-}
-#limparCarrinho{
-margin-top: 10px;
-background-color: #e74c3c;
-color: white;  
-padding: 5px 10px;
-border: none; 
-border-radius: 5px;
-cursor: pointer;
 }
