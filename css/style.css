@@ -64,6 +64,7 @@ header {
 .logo-img {
   width: 15%;
   height: auto;
+  z-index: 1000;
 }
 
 .logo-text {
