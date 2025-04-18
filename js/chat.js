@@ -1,16 +1,15 @@
-let optionsShown = false;
-
 document.getElementById('chatbot-toggle').addEventListener('click', () => {
   const chatbot = document.getElementById('chatbot-box');
   const messagesContainer = document.getElementById('chatbot-messages');
+  
+  // Alterna a visibilidade do chatbot
+  chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
 
-  const isOpening = chatbot.style.display !== 'flex';
-  chatbot.style.display = isOpening ? 'flex' : 'none';
-
-  if (isOpening) {
-    messagesContainer.innerHTML = ''; // Limpa as mensagens anteriores
-    messagesContainer.scrollTop = 0; // Reseta o scroll para o topo
-    showGreetingMessage(); // Exibe a mensagem "Como posso ajudar?"
+  // Se o chatbot foi aberto, exibe as mensagens
+  if (chatbot.style.display === 'flex') {
+    messagesContainer.innerHTML = ''; // Limpa as mensagens antigas
+    showGreetingMessage(); // Exibe a mensagem inicial "Como posso ajudar?"
+    messagesContainer.scrollTop = 0; // Garante que o scroll começa no topo
   }
 });
 
@@ -22,7 +21,7 @@ document.getElementById('chatbot-input').addEventListener('keypress', function (
 function showGreetingMessage() {
   const greeting = "Como posso ajudar? 😊\nEscolha uma das opções abaixo:";
   addMessage(greeting, 'bot');
-  showOptions(); // Mostra as opções logo após a saudação
+  showOptions(); // Exibe as opções após a saudação
 }
 
 function showOptions() {
@@ -57,7 +56,7 @@ function addMessage(text, type) {
   msg.className = type === 'bot' ? 'bot-message' : 'user-message';
   msg.innerHTML = text.replace(/\n/g, "<br>");
   messagesContainer.appendChild(msg);
-  messagesContainer.scrollTop = messagesContainer.scrollHeight; // Garante que o scroll desça quando novas mensagens são adicionadas
+  messagesContainer.scrollTop = messagesContainer.scrollHeight; // Garante que o scroll vai para a última mensagem
 }
 
 function getBotReply(message) {
