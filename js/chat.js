@@ -84,8 +84,8 @@ function getBotReply(message) {
 // Função para exibir opções após cada resposta
 function showPostResponseOptions() {
   const options = `
-1️⃣ - Voltar ao menu
-2️⃣ - Fechar o atendimento`;
+7️⃣ - Voltar ao menu
+8️⃣ - Fechar o atendimento`;
   addMessage(options, 'bot');
 }
 
@@ -93,10 +93,10 @@ function handlePostResponse(message) {
   const option = message.trim();
 
   switch (option) {
-    case '1':
+    case '7':
       showOptions(); // Volta ao menu inicial
       break;
-    case '2':
+    case '8':
       closeChat(); // Fecha o atendimento
       break;
     default:
