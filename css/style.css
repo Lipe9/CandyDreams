@@ -319,13 +319,13 @@ border: none;
   width: 300%;
   height: 100%;
   animation: slide 12s infinite;
- z-index: 1;
+ z-index: 1000;
 }
 
 .slide {
   width: 100vw;
   flex-shrink: 0;
- z-index: 1;
+ z-index: 1000;
 }
 
 .slide img {
@@ -333,7 +333,7 @@ border: none;
   height: 100%;
   object-fit: cover;
   display: block;
-z-index: 1;
+z-index: 1000;
 }
 
 .home-banner {
