@@ -1,1 +1,79 @@
-g
+.titulo-produtos {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 50px 0 30px;
+  color: #ff66b2;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-shadow: 1px 1px 2px #ffcce6;
+}
+
+/* Container dos cards */
+.produtos-container {
+  display: grid;
+  gap: 24px;
+  padding: 0 20px 40px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .produtos-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .produtos-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* Estilo dos cards */
+.produto-card {
+  background: linear-gradient(to bottom, #fff0f5, #ffe6f0);
+  border: 3px solid #ff99cc;
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(255, 102, 178, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.produto-card:hover {
+  transform: scale(1.03);
+}
+
+.produto-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.produto-card h3 {
+  font-size: 1.4rem;
+  color: #cc0066;
+  margin: 10px 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.produto-card .preco {
+  font-size: 1.2rem;
+  color: #ff3399;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.botao-comprar {
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao-comprar:hover {
+  background-color: #e60073;
+}
