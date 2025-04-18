@@ -1,9 +1,23 @@
-let carrinho = [];
+let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+// Função para salvar o carrinho no localStorage
+function salvarCarrinho() {
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+}
 
 // Função para adicionar um produto ao carrinho
 function adicionarAoCarrinho(produto, preco, imagem) {
-  // Adiciona o produto ao carrinho
   carrinho.push({ produto, preco, imagem });
+  salvarCarrinho();
+  atualizarContadorCarrinho();
+  atualizarMiniCarrinho();
+  exibirNotificacao(`${produto} foi adicionado ao carrinho!`);
+}
+
+// Função para remover um item do carrinho por índice
+function removerDoCarrinho(index) {
+  carrinho.splice(index, 1);
+  salvarCarrinho();
   atualizarContadorCarrinho();
   atualizarMiniCarrinho();
 }
@@ -15,12 +29,6 @@ function atualizarContadorCarrinho() {
   contadorDesktop.textContent = carrinho.length;
   contadorMobile.textContent = carrinho.length;
 }
-
-// Seleciona os elementos do mini carrinho
-const miniCarrinho = document.getElementById('miniCarrinho');
-const fecharCarrinho = document.getElementById('fecharCarrinho');
-const carrinhoLinkDesktop = document.querySelector('.carrinho-link');
-const carrinhoLinkMobile = document.querySelector('.mobile-menu .carrinho-link');
 
 // Função para exibir o mini carrinho
 function abrirCarrinho() {
@@ -36,20 +44,19 @@ function fecharMiniCarrinho() {
 function atualizarMiniCarrinho() {
   const itensCarrinho = document.getElementById('itensCarrinho');
   const totalCarrinho = document.getElementById('totalCarrinho');
-  
+
   // Limpa o conteúdo atual
   itensCarrinho.innerHTML = '';
 
-  // Variável para calcular o total
   let total = 0;
 
-  // Adiciona cada item no carrinho ao mini carrinho
-  carrinho.forEach((item) => {
+  carrinho.forEach((item, index) => {
     const li = document.createElement('li');
     li.innerHTML = `
       <img src="${item.imagem}" alt="${item.produto}" width="50" height="50" style="border-radius: 5px; margin-right: 10px;">
-      <span>${item.produto}</span>
+      <span style="flex: 1;">${item.produto}</span>
       <span>R$ ${item.preco.toFixed(2)}</span>
+      <button onclick="removerDoCarrinho(${index})" style="background: none; border: none; color: red; font-weight: bold; margin-left: 10px; cursor: pointer;">X</button>
     `;
     li.style.display = 'flex';
     li.style.alignItems = 'center';
@@ -57,110 +64,37 @@ function atualizarMiniCarrinho() {
     li.style.marginBottom = '10px';
     itensCarrinho.appendChild(li);
 
-    // Adiciona o preço ao total
     total += item.preco;
   });
 
-  // Atualiza o total no carrinho
   totalCarrinho.textContent = `R$ ${total.toFixed(2)}`;
 }
 
-// Adiciona os eventos de clique para abrir e fechar o carrinho
+// Eventos para abrir e fechar o carrinho
 carrinhoLinkDesktop.addEventListener('click', (e) => {
-  e.preventDefault(); // Evita navegação padrão
+  e.preventDefault();
   abrirCarrinho();
 });
 
 carrinhoLinkMobile.addEventListener('click', (e) => {
-  e.preventDefault(); // Evita navegação padrão
+  e.preventDefault();
   abrirCarrinho();
 });
 
 fecharCarrinho.addEventListener('click', fecharMiniCarrinho);
 
-
-// Função para exibir notificações personalizadas
+// Notificação
 function exibirNotificacao(mensagem) {
   const container = document.getElementById('notificacao-container');
-
-  // Cria o elemento da notificação
   const notificacao = document.createElement('div');
   notificacao.classList.add('notificacao');
   notificacao.textContent = mensagem;
-
-  // Adiciona a notificação ao contêiner
   container.appendChild(notificacao);
-
-  // Remove a notificação após 4 segundos
-  setTimeout(() => {
-    notificacao.remove();
-  }, 4000);
+  setTimeout(() => notificacao.remove(), 4000);
 }
 
-// Atualize a função adicionarAoCarrinho para usar a notificação
-function adicionarAoCarrinho(produto, preco, imagem) {
-  // Adiciona o produto ao carrinho
-  carrinho.push({ produto, preco, imagem });
+// Ao carregar a página, atualiza o carrinho
+document.addEventListener('DOMContentLoaded', () => {
   atualizarContadorCarrinho();
   atualizarMiniCarrinho();
-
-  // Exibe a notificação personalizada
-  exibirNotificacao(`${produto} foi adicionado ao carrinho!`);
-}
-
-let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-
-function salvarCarrinho() {
-  localStorage.setItem('carrinho', JSON.stringify(carrinho));
-  atualizarContador();
-}
-
-function atualizarContador() {
-  const totalItens = carrinho.length;
-  document.getElementById('cart-count').innerText = totalItens;
-  document.getElementById('cart-count-mobile').innerText = totalItens;
-}
-
-function adicionarAoCarrinho(nome, preco, imagem) {
-  carrinho.push({ nome, preco, imagem });
-  salvarCarrinho();
-  mostrarCarrinho();
-}
-
-function removerItem(index) {
-  carrinho.splice(index, 1);
-  salvarCarrinho();
-  mostrarCarrinho();
-}
-
-function mostrarCarrinho() {
-  const lista = document.getElementById('itensCarrinho');
-  const total = document.getElementById('totalCarrinho');
-  lista.innerHTML = '';
-  let totalValor = 0;
-
-  carrinho.forEach((item, index) => {
-    const li = document.createElement('li');
-    li.innerHTML = `
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-        <span>${item.nome} - R$ ${item.preco.toFixed(2)}</span>
-        <button onclick="removerItem(${index})" style="background:none; border:none; color:red; font-weight:bold; cursor:pointer;">X</button>
-      </div>
-    `;
-    lista.appendChild(li);
-    totalValor += item.preco;
-  });
-
-  total.innerText = `R$ ${totalValor.toFixed(2)}`;
-}
-
-// Mostrar carrinho ao abrir a página
-document.addEventListener('DOMContentLoaded', () => {
-  mostrarCarrinho();
-  atualizarContador();
-});
-
-// Botão de fechar carrinho
-document.getElementById('fecharCarrinho').addEventListener('click', () => {
-  document.getElementById('miniCarrinho').style.display = 'none';
 });
