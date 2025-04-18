@@ -553,10 +553,10 @@ footer {
 
 #inicio-info .titulo-principal {
   font-size: 3em;
-  font-weight: 800;
   color: ; #555
   text-shadow: 2px 2px #ffc0cb;
   animation: popIn 1s ease-in-out;
+  animation: fadeIn 2s ease-in;
 }
 
  .nome-empresa {
@@ -568,7 +568,7 @@ footer {
 }
 
 #inicio-info .slogan {
- font-size: 1.8rem;
+  font-size: 1.8rem;
   color: #555;
   margin-top: 10px;
   animation: fadeIn 2s ease-in;
