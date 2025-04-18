@@ -207,12 +207,6 @@ form input {
   transform: scale(1.03);
 }
 
-.produto-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 16px;
-}
 
 .produto-card h3 {
   font-size: 1.4rem;
@@ -258,7 +252,6 @@ form input {
 
 /* Container com borda geral */
 .produtos-container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
   border: 6px dashed #ff99cc;
