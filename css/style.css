@@ -206,11 +206,35 @@ img {
 }
 
 /* Rodapé */
-footer {
+#rodape {
+  background-color: #d63384; /* rosa escuro elegante */
+  color: white;
   text-align: center;
-  padding: 1rem;
-  background: #ff3e7f;
-  font-size: 0.9rem;
+  padding: 20px 10px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+#rodape p {
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+#rodape .redes-sociais {
+  margin-top: 10px;
+}
+
+#rodape .redes-sociais a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: transform 0.3s, color 0.3s;
+}
+
+#rodape .redes-sociais a:hover {
+  color: #ffc0cb;
+  transform: scale(1.2);
 }
 
 /* Banner 
