@@ -44,11 +44,18 @@ function sendMessage() {
   addMessage(message, 'user');
   input.value = '';
 
-  setTimeout(() => {
-    const reply = getBotReply(message);
-    addMessage(reply, 'bot');
-    showPostResponseOptions(); // Exibe as opções após a resposta
-  }, 500);
+  // Verificar se a mensagem do usuário é uma opção de fechamento ou de retorno ao menu
+  if (message === '7') {
+    showOptions(); // Voltar ao menu
+  } else if (message === '8') {
+    closeChat(); // Fechar o atendimento
+  } else {
+    setTimeout(() => {
+      const reply = getBotReply(message);
+      addMessage(reply, 'bot');
+      showPostResponseOptions(); // Exibe as opções após a resposta
+    }, 500);
+  }
 }
 
 function addMessage(text, type) {
@@ -87,21 +94,6 @@ function showPostResponseOptions() {
 7️⃣ - Voltar ao menu
 8️⃣ - Fechar o atendimento`;
   addMessage(options, 'bot');
-}
-
-function handlePostResponse(message) {
-  const option = message.trim();
-
-  switch (option) {
-    case '7':
-      showOptions(); // Volta ao menu inicial
-      break;
-    case '8':
-      closeChat(); // Fecha o atendimento
-      break;
-    default:
-      addMessage('Opção inválida. Por favor, digite 7 para voltar ao menu ou 8 para fechar o atendimento.', 'bot');
-  }
 }
 
 function closeChat() {
