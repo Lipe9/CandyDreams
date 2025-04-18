@@ -1,1 +1,64 @@
-k
+#sobre {
+  padding: 60px 20px;
+  background-color: #fff0f6;
+  text-align: center;
+}
+
+.sobre-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sobre-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #d63384;
+}
+
+.sobre-container .historia {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #444;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.equipe {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.membro {
+  background-color: #ffe0ec;
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.membro:hover {
+  transform: translateY(-5px);
+}
+
+.membro img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.membro h3 {
+  font-size: 1.2rem;
+  color: #c2185b;
+  margin: 0;
+}
+
+.membro p {
+  font-size: 0.95rem;
+  color: #555;
+}
