@@ -70,29 +70,3 @@
   font-size: 0.85rem; /* reduzido */
   color: #555;
 }
-
-/* Responsivo ajustado */
-@media (max-width: 768px) {
-  .membro {
-    width: 75%;
-  }
-}
-/* Responsivo para telas menores */
-@media (max-width: 768px) {
-  .equipe {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .membro {
-    width: 80%;
-  }
-
-  .sobre-container h2 {
-    font-size: 2rem;
-  }
-
-  .sobre-container .historia {
-    font-size: 1rem;
-  }
-}
