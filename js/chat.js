@@ -26,11 +26,11 @@ function showGreetingMessage() {
 
 function showOptions() {
   const options = `
-1️⃣ - Qual o horário de atendimento?  
-2️⃣ - Qual o prazo de entrega?  
-3️⃣ - Quanto custa o frete?  
-4️⃣ - Quais são as formas de pagamento?  
-5️⃣ - Quem é o desenvolvedor do site?  
+1️⃣ - Qual o horário de atendimento?  
+2️⃣ - Qual o prazo de entrega?  
+3️⃣ - Quanto custa o frete?  
+4️⃣ - Quais são as formas de pagamento?  
+5️⃣ - Quem é o desenvolvedor do site?  
 6️⃣ - Falar com atendente humano
 Digite o número da dúvida para continuar.`;
   addMessage(options, 'bot');
@@ -102,13 +102,6 @@ function handlePostResponse(message) {
     default:
       addMessage('Opção inválida. Por favor, digite 7 para voltar ao menu ou 8 para fechar o atendimento.', 'bot');
   }
-}
-
-function closeChat() {
-  const chatbot = document.getElementById('chatbot-box');
-  chatbot.style.display = 'none'; // Fecha o chat
-  const messagesContainer = document.getElementById('chatbot-messages');
-  messagesContainer.innerHTML = ''; // Limpa as mensagens
 }
 
 function closeChat() {
