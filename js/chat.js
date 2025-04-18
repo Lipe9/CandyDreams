@@ -100,7 +100,7 @@ function handlePostResponse(message) {
       closeChat(); // Fecha o atendimento
       break;
     default:
-      addMessage('Opção inválida. Por favor, digite 1 para voltar ao menu ou 2 para fechar o atendimento.', 'bot');
+      addMessage('Opção inválida. Por favor, digite 7 para voltar ao menu ou 8 para fechar o atendimento.', 'bot');
   }
 }
 
@@ -109,4 +109,18 @@ function closeChat() {
   chatbot.style.display = 'none'; // Fecha o chat
   const messagesContainer = document.getElementById('chatbot-messages');
   messagesContainer.innerHTML = ''; // Limpa as mensagens
+}
+
+function closeChat() {
+  const chatbot = document.getElementById('chatbot-box');
+  const messagesContainer = document.getElementById('chatbot-messages');
+
+  // Exibe mensagem de agradecimento antes de fechar
+  addMessage('Obrigado por usar nosso atendimento! 😊 Até logo!', 'bot');
+
+  // Aguarda 2 segundos para mostrar a mensagem de agradecimento antes de fechar o chat
+  setTimeout(() => {
+    chatbot.style.display = 'none'; // Fecha o chat
+    messagesContainer.innerHTML = ''; // Limpa as mensagens
+  }, 2000); // Aguarda 2 segundos para mostrar a mensagem de agradecimento
 }
