@@ -1,14 +1,20 @@
-let carrinho = [];
+let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-// Adicionar ao carrinho
+// Salva o carrinho no localStorage
+function salvarCarrinho() {
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+}
+
+// Adiciona produto ao carrinho
 function adicionarAoCarrinho(produto, preco, imagem) {
   carrinho.push({ produto, preco, imagem });
+  salvarCarrinho();
   atualizarContadorCarrinho();
   atualizarMiniCarrinho();
   exibirNotificacao(`${produto} foi adicionado ao carrinho!`);
 }
 
-// Atualizar contadores
+// Atualiza os contadores
 function atualizarContadorCarrinho() {
   document.getElementById('cart-count').textContent = carrinho.length;
   document.getElementById('cart-count-mobile').textContent = carrinho.length;
@@ -20,7 +26,7 @@ const fecharCarrinho = document.getElementById('fecharCarrinho');
 const carrinhoLinkDesktop = document.querySelector('.carrinho-link');
 const carrinhoLinkMobile = document.querySelector('.mobile-menu .carrinho-link');
 
-// Abrir e fechar carrinho
+// Abre e fecha o mini carrinho
 function abrirCarrinho() {
   miniCarrinho.style.display = 'block';
 }
@@ -28,7 +34,7 @@ function fecharMiniCarrinho() {
   miniCarrinho.style.display = 'none';
 }
 
-// Atualizar mini carrinho
+// Atualiza o mini carrinho na lateral
 function atualizarMiniCarrinho() {
   const itensCarrinho = document.getElementById('itensCarrinho');
   const totalCarrinho = document.getElementById('totalCarrinho');
@@ -55,24 +61,37 @@ function atualizarMiniCarrinho() {
 
   totalCarrinho.textContent = `R$ ${total.toFixed(2)}`;
 
-  // Adiciona evento aos botões "X"
-  const botoesRemover = document.querySelectorAll('.remover-item');
-  botoesRemover.forEach((botao) => {
-    botao.addEventListener('click', (e) => {
+  // Eventos para os botões "X"
+  document.querySelectorAll('.remover-item').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
       const index = e.target.getAttribute('data-index');
       removerItemDoCarrinho(index);
     });
   });
 }
 
-// Remover item do carrinho
+// Remove item do carrinho
 function removerItemDoCarrinho(index) {
   carrinho.splice(index, 1);
+  salvarCarrinho();
   atualizarContadorCarrinho();
   atualizarMiniCarrinho();
 }
+// Limpar todos os itens do carrinho
+function limparCarrinho() {
+  carrinho = [];
+  salvarCarrinho();
+  atualizarContadorCarrinho();
+  atualizarMiniCarrinho();
+}
+// Botão para limpar carrinho
+document.getElementById('limparCarrinho').addEventListener('click', () => {
+  if (confirm("Tem certeza que deseja limpar o carrinho?")) {
+    limparCarrinho();
+  }
+});
 
-// Eventos para abrir/fechar o carrinho
+// Eventos para abrir e fechar o carrinho
 carrinhoLinkDesktop.addEventListener('click', (e) => {
   e.preventDefault();
   abrirCarrinho();
@@ -83,7 +102,7 @@ carrinhoLinkMobile.addEventListener('click', (e) => {
 });
 fecharCarrinho.addEventListener('click', fecharMiniCarrinho);
 
-// Notificações
+// Notificação de produto adicionado
 function exibirNotificacao(mensagem) {
   const container = document.getElementById('notificacao-container');
   const notificacao = document.createElement('div');
@@ -94,3 +113,9 @@ function exibirNotificacao(mensagem) {
     notificacao.remove();
   }, 4000);
 }
+
+// Inicializa carrinho com dados salvos
+document.addEventListener('DOMContentLoaded', () => {
+  atualizarContadorCarrinho();
+  atualizarMiniCarrinho();
+});
