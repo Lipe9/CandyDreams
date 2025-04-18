@@ -307,3 +307,33 @@ input[type="text"] {
 .botao-comprar:hover {
   background-color: #e60073;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* impede a rolagem da página */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #fff0f5, #ffe6f0);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.pagina {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.pagina-conteudo {
+  background: #ffffffcc;
+  padding: 40px;
+  border-radius: 30px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
+  border: 4px dashed #ff99cc;
+}
