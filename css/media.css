@@ -303,11 +303,6 @@
   cursor: pointer;
   margin-left: 1rem;
 }
-
-.acessar-btn:hover {
-  background-color: #c71585;
-}
-
 /* Estilo para o ícone de usuário */
 .user-info {
   display: flex;
