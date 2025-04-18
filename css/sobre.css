@@ -1,6 +1,6 @@
 #sobre {
   padding: 60px 20px;
-  background-color: #fff0f6;
+  background: linear-gradient(to bottom, #fff0f6, #ffeaf4);
   text-align: center;
 }
 
@@ -13,6 +13,7 @@
   font-size: 2.5rem;
   margin-bottom: 10px;
   color: #d63384;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .sobre-container .historia {
@@ -22,6 +23,7 @@
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.6;
 }
 
 .equipe {
@@ -32,23 +34,32 @@
 }
 
 .membro {
-  background-color: #ffe0ec;
-  border-radius: 15px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffe0ec,
+    #ffe0ec 10px,
+    #ffd6e6 10px,
+    #ffd6e6 20px
+  );
+  border: 5px dashed #ffb6c1;
+  border-radius: 20px;
   padding: 20px;
-  width: 200px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 220px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
 .membro:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);
 }
 
 .membro img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 15px;
+  border: 3px solid #f8a5c2;
   margin-bottom: 15px;
 }
 
@@ -56,9 +67,30 @@
   font-size: 1.2rem;
   color: #c2185b;
   margin: 0;
+  font-family: 'Comic Sans MS', cursive;
 }
 
 .membro p {
   font-size: 0.95rem;
   color: #555;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .equipe {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .membro {
+    width: 80%;
+  }
+
+  .sobre-container h2 {
+    font-size: 2rem;
+  }
+
+  .sobre-container .historia {
+    font-size: 1rem;
+  }
 }
