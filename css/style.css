@@ -71,6 +71,8 @@ header {
   font-family: 'Lobster', cursive;
   font-size: 1.8rem;
   font-weight: 400;
+ justify-content: center;
+align-items: center;
 }
 
 nav {
