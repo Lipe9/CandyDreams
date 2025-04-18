@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 body {
   background: linear-gradient(to bottom right, #fff0f5, #ffe6f0);
   font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -57,7 +67,6 @@ input[type="text"] {
 
 .pagamento-opcoes {
   display: flex;
-  flex-direction: column;
   gap: 8px;
   margin-bottom: 10px;
 }
