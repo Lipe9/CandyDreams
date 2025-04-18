@@ -597,22 +597,3 @@ footer {
   }
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    text-shadow: 0 0 5px #ff69b4;
-  }
-  50% {
-    transform: scale(1.05);
-    text-shadow: 0 0 15px #ff1493;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
