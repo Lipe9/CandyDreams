@@ -88,7 +88,23 @@ input[type="text"] {
       gap: 1rem;
       max-width: 500px;
       margin-top: 1.5rem;
+flex-direction: column;
     }
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ffc0cb;
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.grupo {
+  display: flex;
+  flex-direction: column; /* empilha os campos */
+  gap: 10px;
+}
 
     label {
       font-weight: bold;
