@@ -141,7 +141,7 @@ nav a:hover {
   left: 0;
   width: 100%;
   padding: 1rem;
-  z-index: 1000;
+/*  z-index: 1000;*/
 }
 
 .mobile-menu a {
