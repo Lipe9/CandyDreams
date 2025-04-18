@@ -71,6 +71,27 @@
 
 @media (min-width: 1024px) {
   .produtos-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Desktop: máximo que couber */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+.produtos-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Padrão: celular (retrato e paisagem) com 2 colunas */
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+/* Tablets pequenos ou celulares em modo paisagem */
+@media (min-width: 600px) {
+  .produtos-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Telas grandes (desktops ou tablets maiores) */
+@media (min-width: 1024px) {
+  .produtos-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
