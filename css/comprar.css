@@ -41,7 +41,6 @@ body {
   color: #ff1493;
   font-weight: bold;
   margin-bottom: 15px;
-  font-family: 'Pacifico', cursive;
 }
 
 form {
@@ -70,7 +69,6 @@ form input[type="text"] {
 
 .pagamento-opcoes {
   display: flex;
-  flex-direction: column;
   gap: 8px;
   margin-bottom: 15px;
 }
