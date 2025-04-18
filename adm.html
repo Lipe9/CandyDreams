@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de Administração</title>
+  <style>
+    form { display: flex; flex-direction: column; max-width: 400px; margin: auto; gap: 10px; }
+    input, textarea { padding: 8px; }
+  </style>
+</head>
+<body>
+  <h2>Adicionar Produto</h2>
+  <form id="product-form">
+    <input type="text" id="name" placeholder="Nome do Produto" required />
+    <textarea id="description" placeholder="Descrição" required></textarea>
+    <input type="text" id="varieties" placeholder="Variedades (separar por vírgula)" />
+    <input type="text" id="size" placeholder="Tamanho" />
+    <input type="text" id="weight" placeholder="Peso" />
+    <input type="number" id="price" placeholder="Preço" step="0.01" required />
+    <input type="file" id="image" accept="image/*" required />
+    <button type="submit">Adicionar Produto</button>
+  </form>
+
+  <script src="adm.js"></script>
+</body>
+</html>
