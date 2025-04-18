@@ -47,6 +47,7 @@ function sendMessage() {
   setTimeout(() => {
     const reply = getBotReply(message);
     addMessage(reply, 'bot');
+    showPostResponseOptions(); // Exibe as opções após a resposta
   }, 500);
 }
 
@@ -78,4 +79,34 @@ function getBotReply(message) {
     default:
       return 'Opção inválida. Por favor, digite um número de 1 a 6.';
   }
+}
+
+// Função para exibir opções após cada resposta
+function showPostResponseOptions() {
+  const options = `
+1️⃣ - Voltar ao menu
+2️⃣ - Fechar o atendimento`;
+  addMessage(options, 'bot');
+}
+
+function handlePostResponse(message) {
+  const option = message.trim();
+
+  switch (option) {
+    case '1':
+      showOptions(); // Volta ao menu inicial
+      break;
+    case '2':
+      closeChat(); // Fecha o atendimento
+      break;
+    default:
+      addMessage('Opção inválida. Por favor, digite 1 para voltar ao menu ou 2 para fechar o atendimento.', 'bot');
+  }
+}
+
+function closeChat() {
+  const chatbot = document.getElementById('chatbot-box');
+  chatbot.style.display = 'none'; // Fecha o chat
+  const messagesContainer = document.getElementById('chatbot-messages');
+  messagesContainer.innerHTML = ''; // Limpa as mensagens
 }
