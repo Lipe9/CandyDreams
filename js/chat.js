@@ -48,11 +48,6 @@ function sendMessage() {
     const reply = getBotReply(message);
     addMessage(reply, 'bot');
     showPostResponseOptions(); // Exibe as opções após a resposta
-
-    // Verifica se a resposta é de post-interação (opções 7 ou 8)
-    if (message === '7' || message === '8') {
-      handlePostResponse(message); // Processa a opção
-    }
   }, 500);
 }
 
