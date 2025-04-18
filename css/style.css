@@ -544,3 +544,73 @@ footer {
 .logout-btn:hover {
   text-decoration: underline;
 }
+
+#inicio-info {
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+#inicio-info .titulo-principal {
+  font-size: 3em;
+  font-weight: 800;
+  color: #ff1493; /* rosa mais forte */
+  text-shadow: 2px 2px #ffc0cb;
+  animation: popIn 1s ease-in-out;
+}
+
+#inicio-info .nome-empresa {
+  color: #ff69b4; /* mesma cor do menu */
+  font-family: 'Pacifico', cursive;
+  animation: pulse 2s infinite;
+}
+
+#inicio-info .slogan {
+  font-size: 1.5em;
+  color: #555;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    text-shadow: 0 0 5px #ff69b4;
+  }
+  50% {
+    transform: scale(1.05);
+    text-shadow: 0 0 15px #ff1493;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
