@@ -1,3 +1,89 @@
+body {
+  background: linear-gradient(to bottom right, #fff0f5, #ffe6f0);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #cc0066;
+}
+
+.pagina {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagina-conteudo {
+  background: #ffffffcc;
+  padding: 40px;
+  border-radius: 30px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(255, 182, 193, 0.4);
+  border: 4px dashed #ff99cc;
+}
+
+h2, h3 {
+  text-align: center;
+  color: #ff3399;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  border: 2px solid #ffb3d9;
+  border-radius: 15px;
+  font-size: 1rem;
+  background-color: #fffafd;
+}
+
+.grupo {
+  display: flex;
+  gap: 10px;
+}
+
+.grupo div {
+  flex: 1;
+}
+
+.pagamento-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.pagamento-opcoes label {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+#detalhesCartao input {
+  margin-top: 8px;
+}
+
+.botao-destaque {
+  margin-top: 20px;
+  background-color: #ff66b2;
+  color: white;
+  padding: 14px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+}
+
+.botao-destaque:hover {
+  background-color: #e60073;
+}
   form {
       display: flex;
       flex-direction: column;
