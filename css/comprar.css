@@ -193,3 +193,31 @@ form input[type="text"] {
 .botao-comprar:hover {
   background-color: #e60073;
 }
+
+@media (max-width: 480px) {
+  .pagina-conteudo {
+    max-width: 95%;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .pagina-conteudo h2,
+  .pagina-conteudo h3 {
+    font-size: 1.5rem;
+  }
+
+  form input[type="text"] {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .grupo {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .botao-destaque {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+}
