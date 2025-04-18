@@ -18,7 +18,7 @@
     <img src="img/logo.png" alt="Candy Dreams Logo" class="logo-img">
   </div>
 
-  <!-- Botão de acessar para Mobile com nome do usuário -->
+  <!-- Botão de acessar ou nome do usuário no MOBILE -->
   <div id="mobile-access-container">
     <button id="acessar-mobile" class="acessar-btn">Acessar</button>
     <div id="user-info-mobile" class="user-info" style="display: none;">
@@ -30,22 +30,24 @@
     </div>
   </div>
 
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+  <!-- Botão do menu hambúrguer -->
+  <div class="hamburger" id="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </div>
 
+  <!-- MENU DESKTOP -->
   <nav>
     <a href="#home1">Início</a>
     <a href="#produtos">Produtos</a>
     <a href="#sobre">Sobre</a>
 
-    <!-- Botão acessar para Desktop com nome do usuário -->
+    <!-- Botão de acessar ou nome do usuário no DESKTOP -->
     <button id="acessar-desktop" class="acessar-btn">Acessar</button>
     <div id="user-info-desktop" class="user-info" style="display: none;">
       <i class="fas fa-user"></i>
-      <span id="username-display"></span>
+      <span id="username-display-desktop"></span>
       <div id="user-dropdown-desktop" class="user-dropdown" style="display: none;">
         <button id="logout-desktop-button">Sair da Conta</button>
       </div>
@@ -56,6 +58,17 @@
       <span id="cart-count" class="cart-count">0</span>
     </a>
   </nav>
+
+  <!-- Menu para dispositivos móveis -->
+  <div class="mobile-menu" id="mobileMenu" style="display: none;">
+    <a href="#home1">Início</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#carrinho" class="carrinho-link">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count-mobile" class="cart-count">0</span>
+    </a>
+  </div>
 </header>
   <main>
 <section id="home1" class="pagina1 home-banner">
