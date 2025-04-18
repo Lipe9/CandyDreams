@@ -147,7 +147,7 @@ nav a:hover {
 .mobile-menu a {
   color: white;
   padding: 0.5rem 0;
-z-index: 1000;
+  z-index: 1000;
 }
 
 /* Conteúdo principal */
@@ -319,11 +319,13 @@ border: none;
   width: 300%;
   height: 100%;
   animation: slide 12s infinite;
+ z-index: 1;
 }
 
 .slide {
   width: 100vw;
   flex-shrink: 0;
+ z-index: 1;
 }
 
 .slide img {
@@ -331,6 +333,7 @@ border: none;
   height: 100%;
   object-fit: cover;
   display: block;
+z-index: 1;
 }
 
 .home-banner {
