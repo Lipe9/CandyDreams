@@ -92,7 +92,7 @@ nav a:hover {
   height: 25px;
   justify-content: center;
   position: relative;
-z-index: 1000;
+/*  z-index: 1000;*/
 }
 
 .hamburger span {
