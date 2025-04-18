@@ -101,20 +101,6 @@
   }
 }
 
-.titulo-produtos {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 40px;
-  color: #ff66b2;
-}
-
-.produtos-container {
-  display: grid;
-  gap: 20px;
-  padding: 20px;
-  grid-template-columns: repeat(2, 1fr); /* Celular */
-}
-
 @media (min-width: 768px) {
   .produtos-container {
     grid-template-columns: repeat(3, 1fr); /* Tablet */
