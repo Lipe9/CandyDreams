@@ -13,47 +13,50 @@
 
 </head>
 <body>
- <header>
+<header>
   <div class="logo-container">
     <img src="img/logo.png" alt="Candy Dreams Logo" class="logo-img">
   </div>
-<nav>
-  <a href="#home1">Início</a> 
-  <a href="#produtos">Produtos</a>
-  <a href="#sobre">Sobre</a>
-  <button id="acessar-desktop" class="acessar-btn">Acessar</button>
 
-  <div id="user-info" class="user-info" style="display:   none;">
-    <i class="fas fa-user"></i>
-    <span id="username-display"></span>
+  <!-- Botão de acessar para Mobile com nome do usuário -->
+  <div id="mobile-access-container">
+    <button id="acessar-mobile" class="acessar-btn">Acessar</button>
+    <div id="user-info-mobile" class="user-info" style="display: none;">
+      <i class="fas fa-user"></i>
+      <span id="username-display-mobile"></span>
+      <div id="user-dropdown-mobile" class="user-dropdown" style="display: none;">
+        <button id="logout-mobile-button">Sair da Conta</button>
+      </div>
     </div>
+  </div>
 
-  <a href="#carrinho" class="carrinho-link">
-  <i class="fas fa-shopping-cart"></i>
-  <span id="cart-count" class="cart-count">0</span></a>
-</nav>
-  <button id="acessar-mobile" class="acessar-btn">Acessar</button>
-  <div id="user-info" class="user-info" style="display:   none;">
-    <i class="fas fa-user"></i>
-    <span id="username-display"></span>
-    </div>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
   </div>
- <!-- <button id="logout-button">Sair da Conta</button> -->
-</header>
 
-  <div class="mobile-menu" id="mobileMenu">
-  <a href="#home1">Início</a>
-  <a href="#produtos">Produtos</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#carrinho" class="carrinho-link">
-   <i class="fas fa-shopping-cart"></i>
-  <span id="cart-count-mobile" class="cart-count">0</span>
-</a>
-</div>
+  <nav>
+    <a href="#home1">Início</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#sobre">Sobre</a>
+
+    <!-- Botão acessar para Desktop com nome do usuário -->
+    <button id="acessar-desktop" class="acessar-btn">Acessar</button>
+    <div id="user-info-desktop" class="user-info" style="display: none;">
+      <i class="fas fa-user"></i>
+      <span id="username-display"></span>
+      <div id="user-dropdown-desktop" class="user-dropdown" style="display: none;">
+        <button id="logout-desktop-button">Sair da Conta</button>
+      </div>
+    </div>
+
+    <a href="#carrinho" class="carrinho-link">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count" class="cart-count">0</span>
+    </a>
+  </nav>
+</header>
   <main>
 <section id="home1" class="pagina1 home-banner">
   <div class="carousel-container">
