@@ -212,35 +212,35 @@
 }
 
 
-.user-login {
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
+
+/* Estilo para o botão de Acessar */
+.acessar-btn {
+  background-color: #ff3e7f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.btn-acessar {
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
+.acessar-btn:hover {
+  background-color: #c71585;
 }
 
-.btn-acessar:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+/* Estilo para a exibição do usuário logado */
+.usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
 }
 
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: white;
-  font-weight: bold;
+.usuario-info i {
+  font-size: 1.5rem;
 }
 
-.hidden {
-  display: none;
+.usuario-info span {
+  font-weight: 600;
 }
