@@ -554,7 +554,7 @@ footer {
 #inicio-info .titulo-principal {
   font-size: 3em;
   font-weight: 800;
-  color: #ff3e7f; /* rosa mais forte */
+  color: ; #555
   text-shadow: 2px 2px #ffc0cb;
   animation: popIn 1s ease-in-out;
 }
