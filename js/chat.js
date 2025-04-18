@@ -20,13 +20,15 @@ document.getElementById('chatbot-input').addEventListener('keypress', function (
 });
 
 function showGreetingMessage() {
-  const greeting = "Como posso ajudar? 😊\nEscolha uma das opções abaixo:";
+  // const greeting = "Como posso ajudar? 😊\nEscolha uma das opções abaixo:";
   addMessage(greeting, 'bot');
   showOptions(); // Mostra as opções logo após a saudação
 }
 
 function showOptions() {
   const options = `
+Como posso ajudar?😊
+Escolha uma das opções abaixo
 1️⃣ - Qual o horário de atendimento?  
 2️⃣ - Qual o prazo de entrega?  
 3️⃣ - Quanto custa o frete?  
