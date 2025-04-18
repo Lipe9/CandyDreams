@@ -1,12 +1,27 @@
 document.getElementById('chatbot-toggle').addEventListener('click', () => {
   const chatbot = document.getElementById('chatbot-box');
   chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
+  if (chatbot.style.display === 'flex') {
+    showOptions(); // Mostra as opções quando abrir
+  }
 });
 
 document.getElementById('chatbot-send').addEventListener('click', sendMessage);
 document.getElementById('chatbot-input').addEventListener('keypress', function (e) {
   if (e.key === 'Enter') sendMessage();
 });
+
+function showOptions() {
+  const options = `
+1️⃣ - Qual o horário de atendimento?  
+2️⃣ - Qual o prazo de entrega?  
+3️⃣ - Quanto custa o frete?  
+4️⃣ - Quais são as formas de pagamento?  
+5️⃣ - Quem é o desenvolvedor do site?  
+6️⃣ - Falar com atendente humano
+Digite o número da dúvida para continuar.`;
+  addMessage(options, 'bot');
+}
 
 function sendMessage() {
   const input = document.getElementById('chatbot-input');
@@ -19,7 +34,7 @@ function sendMessage() {
   setTimeout(() => {
     const reply = getBotReply(message);
     addMessage(reply, 'bot');
-  }, 700);
+  }, 500);
 }
 
 function addMessage(text, type) {
@@ -32,33 +47,22 @@ function addMessage(text, type) {
 }
 
 function getBotReply(message) {
-  const msg = message.toLowerCase();
+  const option = message.trim();
 
-  if (msg.includes('horário') || msg.includes('funciona')) {
-    return 'Nosso atendimento é de segunda a sexta, das 08h às 18h.';
+  switch (option) {
+    case '1':
+      return 'Nosso atendimento é de segunda a sexta, das 08h às 18h.';
+    case '2':
+      return 'Entregamos em até 5 dias úteis após a confirmação do pagamento.';
+    case '3':
+      return 'O frete é calculado no carrinho com base no seu CEP.';
+    case '4':
+      return 'Aceitamos cartões de crédito, boleto bancário e Pix.';
+    case '5':
+      return 'Desenvolvedor: Felipe Silva (@felipezy_9)';
+    case '6':
+      return 'Aguarde um momento, conectando com um atendente humano...';
+    default:
+      return 'Opção inválida. Por favor, digite um número de 1 a 6.';
   }
-
-  if (msg.includes('entrega') || msg.includes('prazo')) {
-    return 'Entregamos em até 5 dias úteis após a confirmação do pagamento.';
-  }
-
-  if (msg.includes('frete') || msg.includes('custo')) {
-    return 'O frete é calculado no carrinho com base no seu CEP.';
-  }
-
-  if (msg.includes('formas de pagamento') || msg.includes('pagar')) {
-    return 'Aceitamos cartões de crédito, boleto bancário e Pix.';
-  }
-
-if (msg.includes('nome do programador') || msg.includes('nome do desenvolvedo')) {
-    return 'Felipe Silva, @felipezy_9';
 }
-
-  if (msg.includes('olá') || msg.includes('oi')) {
-    return 'Olá! Como posso te ajudar hoje? 😊';
-  }
-
-  return 'Desculpe, ainda não entendi. Pode reformular a pergunta?';
-}
-
- 
