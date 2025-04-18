@@ -1,8 +1,18 @@
+let optionsShown = false; // Para evitar duplicar mensagens de opções
+
 document.getElementById('chatbot-toggle').addEventListener('click', () => {
   const chatbot = document.getElementById('chatbot-box');
-  chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
-  if (chatbot.style.display === 'flex') {
-    showOptions(); // Mostra as opções quando abrir
+  const isOpening = chatbot.style.display !== 'flex';
+  chatbot.style.display = isOpening ? 'flex' : 'none';
+
+  if (isOpening) {
+    const messagesContainer = document.getElementById('chatbot-messages');
+    messagesContainer.scrollTop = 0; // 👈 Faz o scroll voltar pro topo
+
+    if (!optionsShown) {
+      showOptions(); // Só mostra se ainda não mostrou
+      optionsShown = true;
+    }
   }
 });
 
@@ -12,7 +22,7 @@ document.getElementById('chatbot-input').addEventListener('keypress', function (
 });
 
 function showOptions() {
-  const options = `
+  const options = `
 1️⃣ - Qual o horário de atendimento?  
 2️⃣ - Qual o prazo de entrega?  
 3️⃣ - Quanto custa o frete?  
@@ -20,7 +30,7 @@ function showOptions() {
 5️⃣ - Quem é o desenvolvedor do site?  
 6️⃣ - Falar com atendente humano
 Digite o número da dúvida para continuar.`;
-  addMessage(options, 'bot');
+  addMessage(options, 'bot');
 }
 
 function sendMessage() {
