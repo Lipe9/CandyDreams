@@ -56,9 +56,7 @@ function getBotReply(message) {
 
   return 'Desculpe, ainda não entendi. Pode reformular a pergunta?';
 }
- if (msg.includes('nome do programador') || msg.includes('nome do desenvolvedo')) {
-    return 'Olá! Como posso te ajudar hoje? 😊';
-  }
 
-  return 'Felipe Silva, @felipezy_9';
+ if (msg.includes('nome do programador') || msg.includes('nome do desenvolvedo')) {
+    return 'Felipe Silva, @felipezy_9';
 }
