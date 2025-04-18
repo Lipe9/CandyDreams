@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Candy Dreams</title>
+  <link rel="stylesheet" href="css/login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2 id="form-title">Login</h2>
+
+      <!-- Login Form -->
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input type="password" id="login-password" placeholder="Senha" required />
+        <button type="submit">Entrar</button>
+        <p class="switch-msg">Não tem conta? <span id="switch-to-register">Cadastre-se</span></p>
+      </form>
+
+      <!-- Register Form -->
+      <form id="register-form" class="hidden">
+        <input type="text" id="register-name" placeholder="Nome" required />
+        <input type="email" id="register-email" placeholder="Email" required />
+        <input type="password" id="register-password" placeholder="Senha" required />
+        <button type="submit">Cadastrar</button>
+        <p class="switch-msg">Já tem conta? <span id="switch-to-login">Fazer login</span></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
