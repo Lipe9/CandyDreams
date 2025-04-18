@@ -1,7 +1,7 @@
-// Exibir modal de login/cadastro
+// Selecionar elementos do DOM
 const loginModal = document.getElementById('login-modal');
 const acessarBtns = document.querySelectorAll('.acessar-btn');
-const userInfoDesktop = document.getElementById('user-info');
+const userInfoDesktop = document.getElementById('user-info-desktop');
 const userInfoMobile = document.getElementById('user-info-mobile');
 const usernameDesktop = document.getElementById('username-display');
 const usernameMobile = document.getElementById('username-display-mobile');
@@ -10,10 +10,13 @@ const showRegister = document.getElementById('show-register');
 const showLogin = document.getElementById('show-login');
 const loginContainer = document.querySelector('.login-container');
 const registerContainer = document.querySelector('.register-container');
+const loginForm = document.getElementById('login-form');
+const registerForm = document.getElementById('register-form');
 
 // Abrir modal
 acessarBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault(); // Previne o comportamento padrão do link
     loginModal.style.display = 'flex';
   });
 });
@@ -36,9 +39,6 @@ showLogin.addEventListener('click', () => {
 });
 
 // Simular login e cadastro
-const loginForm = document.getElementById('login-form');
-const registerForm = document.getElementById('register-form');
-
 loginForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const username = document.getElementById('login-username').value;
@@ -72,8 +72,17 @@ function atualizarUsuario() {
 
     userInfoMobile.style.display = 'flex';
     usernameMobile.textContent = username;
+  } else {
+    // Mostrar botões "Acessar"
+    acessarBtns.forEach((btn) => {
+      btn.style.display = 'block';
+    });
+
+    // Esconder informações do usuário
+    userInfoDesktop.style.display = 'none';
+    userInfoMobile.style.display = 'none';
   }
 }
 
-// Checar se o usuário já está logado ao carregar a página
+// Verificar status do usuário ao carregar a página
 window.addEventListener('DOMContentLoaded', atualizarUsuario);
