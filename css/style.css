@@ -25,13 +25,6 @@ nav a {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
-.titulo-secao {
-  font-size: 2rem;
-  color: #c71585;
-  margin-bottom: 2rem;
-  text-align: center;
-  font-weight: 700;
-}
 
 nav a,
  .mobile-menu a {
