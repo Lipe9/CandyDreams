@@ -1,6 +1,10 @@
-// Exibir modal
+// Exibir modal de login/cadastro
 const loginModal = document.getElementById('login-modal');
 const acessarBtns = document.querySelectorAll('.acessar-btn');
+const userInfoDesktop = document.getElementById('user-info-desktop');
+const userInfoMobile = document.getElementById('user-info-mobile');
+const usernameDesktop = document.getElementById('username-display');
+const usernameMobile = document.getElementById('username-display-mobile');
 const closeModal = document.getElementById('modal-close');
 const showRegister = document.getElementById('show-register');
 const showLogin = document.getElementById('show-login');
@@ -38,7 +42,7 @@ const registerForm = document.getElementById('register-form');
 loginForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const username = document.getElementById('login-username').value;
-  // Salva o usuário no localStorage e volta para a tela inicial
+  // Salva o usuário no localStorage e atualiza a interface
   localStorage.setItem('username', username);
   atualizarUsuario();
   loginModal.style.display = 'none';
@@ -47,7 +51,7 @@ loginForm.addEventListener('submit', (e) => {
 registerForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const username = document.getElementById('register-username').value;
-  // Salva o usuário no localStorage e volta para a tela inicial
+  // Salva o usuário no localStorage e atualiza a interface
   localStorage.setItem('username', username);
   atualizarUsuario();
   loginModal.style.display = 'none';
@@ -57,17 +61,19 @@ registerForm.addEventListener('submit', (e) => {
 function atualizarUsuario() {
   const username = localStorage.getItem('username');
   if (username) {
-    document.querySelectorAll('.acessar-btn').forEach((btn) => {
+    // Esconder botões "Acessar"
+    acessarBtns.forEach((btn) => {
       btn.style.display = 'none';
     });
-    const nav = document.querySelector('nav');
-    const userSpan = document.createElement('span');
-    userSpan.textContent = `Bem-vindo, ${username}`;
-    userSpan.style.marginLeft = '1rem';
-    userSpan.style.color = 'white';
-    nav.appendChild(userSpan);
+
+    // Mostrar informações do usuário
+    userInfoDesktop.style.display = 'flex';
+    usernameDesktop.textContent = username;
+
+    userInfoMobile.style.display = 'flex';
+    usernameMobile.textContent = username;
   }
 }
 
-// Checar se o usuário já está logado
+// Checar se o usuário já está logado ao carregar a página
 window.addEventListener('DOMContentLoaded', atualizarUsuario);
