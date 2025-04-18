@@ -194,7 +194,35 @@ img {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
+.produto-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 10px;
+}
 
+.produto-card {
+  flex: 1 1 calc(33.333% - 20px); /* 3 por linha no desktop */
+  max-width: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+/* Para tablets: 2 por linha */
+@media (max-width: 768px) {
+  .produto-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+/* Para celulares: 2 por linha */
+@media (max-width: 480px) {
+  .produto-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
 .produto-card:hover {
   transform: translateY(-8px);
 }
