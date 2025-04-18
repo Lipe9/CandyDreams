@@ -64,7 +64,7 @@ header {
 .logo-img {
   width: 15%;
   height: auto;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .logo-text {
@@ -137,11 +137,11 @@ nav a:hover {
   flex-direction: column;
   background: #ff3e7f;
   position: fixed;
-  top: 60px;
+  top: 45px;
   left: 0;
   width: 100%;
   padding: 1rem;
-z-index: 1000;
+  z-index: 1000;
 }
 
 .mobile-menu a {
