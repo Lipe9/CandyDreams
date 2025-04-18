@@ -27,7 +27,7 @@ nav a {
 }
 
 nav a,
-.mobile-menu a {
+ .mobile-menu a {
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -559,9 +559,11 @@ footer {
   animation: popIn 1s ease-in-out;
 }
 
-#inicio-info .nome-empresa {
-  color: #ff69b4; /* mesma cor do menu */
-  font-family: 'Pacifico', cursive;
+ .nome-empresa {
+  color: #ff69b4;
+  font-family: 'Lobster', cursive;
+  font-size: 1.8rem;
+  font-weight: 400;
   animation: pulse 2s infinite;
 }
 
