@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Painel de Administração</title>
+  <meta charset="UTF-8" />
+  <title>Painel Administrativo - Candy Dreams</title>
   <style>
-    form { display: flex; flex-direction: column; max-width: 400px; margin: auto; gap: 10px; }
-    input, textarea { padding: 8px; }
+    body { font-family: Arial; padding: 20px; max-width: 600px; margin: auto; }
+    input, textarea, button { width: 100%; padding: 8px; margin: 8px 0; }
   </style>
 </head>
 <body>
-  <h2>Adicionar Produto</h2>
-  <form id="product-form">
-    <input type="text" id="name" placeholder="Nome do Produto" required />
-    <textarea id="description" placeholder="Descrição" required></textarea>
-    <input type="text" id="varieties" placeholder="Variedades (separar por vírgula)" />
-    <input type="text" id="size" placeholder="Tamanho" />
-    <input type="text" id="weight" placeholder="Peso" />
-    <input type="number" id="price" placeholder="Preço" step="0.01" required />
-    <input type="file" id="image" accept="image/*" required />
-    <button type="submit">Adicionar Produto</button>
-  </form>
+  <h1>Adicionar Produto</h1>
+  <input type="text" id="nome" placeholder="Nome do produto" />
+  <input type="text" id="imagem" placeholder="URL da imagem" />
+  <textarea id="descricao" placeholder="Descrição"></textarea>
+  <input type="text" id="variedades" placeholder="Variedades (ex: chocolate, morango)" />
+  <input type="number" id="valor" placeholder="Valor" />
+  <input type="text" id="tamanho" placeholder="Tamanho" />
+  <input type="text" id="peso" placeholder="Peso" />
+  <button onclick="adicionarProduto()">Adicionar</button>
 
-  <script src="adm.js"></script>
+  <script>
+    function adicionarProduto() {
+      const produto = {
+        nome: document.getElementById('nome').value,
+        imagem: document.getElementById('imagem').value,
+        descricao: document.getElementById('descricao').value,
+        variedades: document.getElementById('variedades').value,
+        valor: parseFloat(document.getElementById('valor').value),
+        tamanho: document.getElementById('tamanho').value,
+        peso: document.getElementById('peso').value
+      };
+
+      const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+      produtos.push(produto);
+      localStorage.setItem('produtos', JSON.stringify(produtos));
+      alert('Produto adicionado com sucesso!');
+    }
+  </script>
 </body>
 </html>
