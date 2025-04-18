@@ -16,16 +16,13 @@
     <div class="logo-text">Candy Dreams</div>
   </div>
 <nav>
-  <a href="#home1">Início</a>
-  <a href="#sobre">Sobre</a>
+  <a href="#home1">Início</a> 
   <a href="#produtos">Produtos</a>
-
+  <a href="#sobre">Sobre</a>
   <a href="#carrinho" class="carrinho-link">
   <i class="fas fa-shopping-cart"></i>
-  <span id="cart-count" class="cart-count">0</span>
-       </a>
+  <span id="cart-count" class="cart-count">0</span></a>
 </nav>
-
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span>
     <span></span>
@@ -35,8 +32,8 @@
 
   <div class="mobile-menu" id="mobileMenu">
   <a href="#home1">Início</a>
-  <a href="#sobre">Sobre</a>
   <a href="#produtos">Produtos</a>
+  <a href="#sobre">Sobre</a>
   <a href="#carrinho" class="carrinho-link">
    <i class="fas fa-shopping-cart"></i>
   <span id="cart-count-mobile" class="cart-count">0</span>
@@ -65,18 +62,10 @@
     <p class="slogan">
       Os doces mais irresistíveis para adoçar seu dia.
     </p>
-  
     <a href="#produtos" class="botao-destaque">Conheça nossos produtos</a>
   </div>
 </div>
-</section>
-    <section id="sobre" class="pagina">
-      <div class="pagina-conteudo">
-        <h2>Sobre Nós</h2>
-        <p>Somos apaixonados por doces e buscamos sempre levar qualidade e carinho em cada produto.</p>
-      </div>
-    </section>
-   <section id="produtos" class="pagina">
+ <section id="produtos" class="pagina">
    
 <div class="produto-card">
   <img src="img/Brigadeiro (1).png" alt="Brigadeiro" width="100" />
@@ -98,9 +87,22 @@
   <p class="preco">R$ 2,00</p>
   <button class="botao-comprar" onclick="adicionarAoCarrinho('Mousse', 2.00, 'img/Mousse.png')">Comprar</button>
 </div>
+<div class="produto-card">
+  <img src="img/Mousse.png" alt="Mousse" width="100" />
+  <h3>Chocolate</h3>
+  <p class="preco">R$ 10,00</p>
+  <button class="botao-comprar" onclick="adicionarAoCarrinho('Chocolate', 10.00, 'img/Mousse.png')">Comprar</button>
+</div>
     </div>
   </div>
 </section>
+</section>
+    <section id="sobre" class="pagina">
+      <div class="pagina-conteudo">
+        <h2>Sobre Nós</h2>
+        <p>Somos apaixonados por doces e buscamos sempre levar qualidade e carinho em cada produto.</p>
+      </div>
+    </section>  
   </main>
 <!-- Mini Carrinho -->
 <div class="mini-carrinho" id="miniCarrinho">
