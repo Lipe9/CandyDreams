@@ -1,10 +1,10 @@
 // Exibir modal de login/cadastro
 const loginModal = document.getElementById('login-modal');
 const acessarBtns = document.querySelectorAll('.acessar-btn');
-const userInfoDesktop = document.getElementById('user-info-desktop');
-const userInfoMobile = document.getElementById('user-info-mobile');
+const userInfoDesktop = document.getElementById('user-info');
+const userInfoMobile = document.getElementById('user-info');
 const usernameDesktop = document.getElementById('username-display');
-const usernameMobile = document.getElementById('username-display-mobile');
+const usernameMobile = document.getElementById('username-display');
 const closeModal = document.getElementById('modal-close');
 const showRegister = document.getElementById('show-register');
 const showLogin = document.getElementById('show-login');
