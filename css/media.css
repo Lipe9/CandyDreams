@@ -294,11 +294,11 @@
 
 /* Botão de acessar */
 .acessar-btn {
-  background-color: #ff3e7f;
+  background-color: transparent;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  border: 5px solid white;
   font-weight: bold;
   cursor: pointer;
   margin-left: 1rem;
