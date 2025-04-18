@@ -1,5 +1,3 @@
-const OPENAI_API_KEY = 'SUA_API_KEY_AQUI';
-
 document.getElementById('chatbot-toggle').addEventListener('click', () => {
   const chatbot = document.getElementById('chatbot-box');
   chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
@@ -18,13 +16,10 @@ function sendMessage() {
   addMessage(message, 'user');
   input.value = '';
 
-  // Carregando...
-  addMessage('Digitando...', 'bot');
-
-  getAIResponse(message).then(reply => {
-    const botMessages = document.querySelectorAll('.bot-message');
-    botMessages[botMessages.length - 1].textContent = reply;
-  });
+  setTimeout(() => {
+    const reply = getBotReply(message);
+    addMessage(reply, 'bot');
+  }, 700);
 }
 
 function addMessage(text, type) {
@@ -36,20 +31,28 @@ function addMessage(text, type) {
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
 
-async function getAIResponse(message) {
-  const response = await fetch('https://api.openai.com/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${OPENAI_API_KEY}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: message }],
-      temperature: 0.7
-    })
-  });
+function getBotReply(message) {
+  const msg = message.toLowerCase();
 
-  const data = await response.json();
-  return data.choices?.[0]?.message?.content?.trim() || 'Desculpe, houve um erro ao buscar resposta 😥';
+  if (msg.includes('horário') || msg.includes('funciona')) {
+    return 'Nosso atendimento é de segunda a sexta, das 08h às 18h.';
+  }
+
+  if (msg.includes('entrega') || msg.includes('prazo')) {
+    return 'Entregamos em até 5 dias úteis após a confirmação do pagamento.';
+  }
+
+  if (msg.includes('frete') || msg.includes('custo')) {
+    return 'O frete é calculado no carrinho com base no seu CEP.';
+  }
+
+  if (msg.includes('formas de pagamento') || msg.includes('pagar')) {
+    return 'Aceitamos cartões de crédito, boleto bancário e Pix.';
+  }
+
+  if (msg.includes('olá') || msg.includes('oi')) {
+    return 'Olá! Como posso te ajudar hoje? 😊';
+  }
+
+  return 'Desculpe, ainda não entendi. Pode reformular a pergunta?';
 }
