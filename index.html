@@ -13,63 +13,35 @@
 
 </head>
 <body>
-<header>
+< <header>
   <div class="logo-container">
     <img src="img/logo.png" alt="Candy Dreams Logo" class="logo-img">
   </div>
-
-  <!-- Botão de acessar ou nome do usuário no MOBILE -->
-  <div id="mobile-access-container">
-    <button id="acessar-mobile" class="acessar-btn">Acessar</button>
-    <div id="user-info-mobile" class="user-info" style="display: none;">
-      <i class="fas fa-user"></i>
-      <span id="username-display-mobile"></span>
-      <div id="user-dropdown-mobile" class="user-dropdown" style="display: none;">
-        <button id="logout-mobile-button">Sair da Conta</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Botão do menu hambúrguer -->
-  <div class="hamburger" id="hamburger">
+<nav>
+  <a href="#home1">Início</a> 
+  <a href="#produtos">Produtos</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#sobre">Acessar</a>
+  <a href="#carrinho" class="carrinho-link">
+  <i class="fas fa-shopping-cart"></i>
+  <span id="cart-count" class="cart-count">0</span></a>
+</nav>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
-  </div>
-
-  <!-- MENU DESKTOP -->
-  <nav>
-    <a href="#home1">Início</a>
-    <a href="#produtos">Produtos</a>
-    <a href="#sobre">Sobre</a>
-
-    <!-- Botão de acessar ou nome do usuário no DESKTOP -->
-    <button id="acessar-desktop" class="acessar-btn">Acessar</button>
-    <div id="user-info-desktop" class="user-info" style="display: none;">
-      <i class="fas fa-user"></i>
-      <span id="username-display-desktop"></span>
-      <div id="user-dropdown-desktop" class="user-dropdown" style="display: none;">
-        <button id="logout-desktop-button">Sair da Conta</button>
-      </div>
-    </div>
-
-    <a href="#carrinho" class="carrinho-link">
-      <i class="fas fa-shopping-cart"></i>
-      <span id="cart-count" class="cart-count">0</span>
-    </a>
-  </nav>
-
-  <!-- Menu para dispositivos móveis -->
-  <div class="mobile-menu" id="mobileMenu" style="display: none;">
-    <a href="#home1">Início</a>
-    <a href="#produtos">Produtos</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#carrinho" class="carrinho-link">
-      <i class="fas fa-shopping-cart"></i>
-      <span id="cart-count-mobile" class="cart-count">0</span>
-    </a>
   </div>
 </header>
+  <div class="mobile-menu" id="mobileMenu">
+  <a href="#home1">Início</a>
+  <a href="#produtos">Produtos</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#carrinho" class="carrinho-link">
+   <i class="fas fa-shopping-cart"></i>
+  <span id="cart-count-mobile" class="cart-count">0</span>
+</a>
+<a href="#sobre">Acessar</a>
+</div>
   <main>
 <section id="home1" class="pagina1 home-banner">
   <div class="carousel-container">
@@ -225,6 +197,6 @@
   <script src="js/script.js"></script>
   <script src="js/carrinho.js"></script>
   <script src="js/chat.js"></script>
-  <script src="js/login.js"></script>
+<!--  <script src="js/login.js"></script> -->
 </body>
 </html>
