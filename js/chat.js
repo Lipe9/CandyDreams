@@ -12,15 +12,15 @@ document.getElementById('chatbot-input').addEventListener('keypress', function (
 });
 
 function showOptions() {
-  const options = `
-1️⃣ - Qual o horário de atendimento?\n
-2️⃣ - Qual o prazo de entrega?\n
-3️⃣ - Quanto custa o frete?\n
-4️⃣ - Quais são as formas de pagamento?\n
-5️⃣ - Quem é o desenvolvedor do site?\n
-6️⃣ - Falar com atendente humano\n
+  const options = `
+1️⃣ - Qual o horário de atendimento?  
+2️⃣ - Qual o prazo de entrega?  
+3️⃣ - Quanto custa o frete?  
+4️⃣ - Quais são as formas de pagamento?  
+5️⃣ - Quem é o desenvolvedor do site?  
+6️⃣ - Falar com atendente humano
 Digite o número da dúvida para continuar.`;
-  addMessage(options, 'bot');
+  addMessage(options, 'bot');
 }
 
 function sendMessage() {
