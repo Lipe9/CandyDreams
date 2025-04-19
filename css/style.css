@@ -1,4 +1,3 @@
-/* Reset e base */
 * {
   margin: 0;
   padding: 0;
@@ -204,6 +203,7 @@ img {
 }
 
 /* Rodapé */
+
 #rodape {
   background-color: #d63384; /* rosa escuro elegante */
   color: white;
@@ -371,8 +371,9 @@ z-index: 1000;
 }
 
 /* Espaçamento entre o menu e o carrossel */
+
 .carousel-container {
-  margin-top: 95px;
+  margin-top: 80px;
   position: relative;
   overflow: hidden;
   width: 100%;
