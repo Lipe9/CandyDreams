@@ -384,14 +384,9 @@ z-index: 1000;
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 300%;
+  width: 100%;
 }
 
-/* Imagens do carrossel */
-.carousel img {
-  width: 100vw;
-  object-fit: cover;
-}
 
 /* Botões de navegação */
 .carousel-controls {
