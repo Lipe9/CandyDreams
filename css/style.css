@@ -379,14 +379,15 @@ z-index: 1000;
   width: 100%;
   height 100%;
 }
-
-/* Carrossel com transição suave */
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
   width: 100%;
 }
-
+.carousel img {
+  width: 100vw;
+  object-fit: cover;
+}
 
 /* Botões de navegação */
 .carousel-controls {
