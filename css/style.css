@@ -457,8 +457,8 @@ z-index: 1000;
 }
 
 .mobile-menu .cart-count {
-  position: absolute;
-  right: 510px
+  position: relative;
+  right: 5px
 }
 .mini-carrinho {
   position: fixed;
