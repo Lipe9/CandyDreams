@@ -373,7 +373,7 @@ z-index: 1000;
 /* Espaçamento entre o menu e o carrossel */
 
 .carousel-container {
-  margin-top: 6.5%;
+  margin-top: 70px;
   position: relative;
   overflow: hidden;
   width: 100%;
