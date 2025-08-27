@@ -155,7 +155,7 @@ main {
 }
 
 .pagina {
-  min-height: 90vh;
+  min-height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
